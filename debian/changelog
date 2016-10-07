@@ -1,0 +1,1859 @@
+xubuntu-default-settings (16.10.3) yakkety; urgency=medium
+
+  * debian/control:
+    - Drop dependencies on dbus-user-session and systemd, these
+      are not needed with the previous changes and seem to be related
+      to slowness with adjusting display backlights.
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Thu, 06 Oct 2016 20:04:33 -0400
+
+xubuntu-default-settings (16.10.2) yakkety; urgency=medium
+
+  * Revert systemd user unit changes (LP: #1622303)
+  * usr/share/xsessions/xubuntu.desktop: Switch Exec= line back to
+    direct startxfce4 execution.
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Wed, 28 Sep 2016 06:02:49 -0400
+
+xubuntu-default-settings (16.10.1) yakkety; urgency=medium
+
+  * Add xubuntu-session.target user systemd unit.
+  * usr/share/xsessions/xubuntu.desktop: Switch Exec= line from direct
+    startxfce4 execution to running xubuntu-session.target through systemd.
+    Bump xfce4-session dependency accordingly.
+  * Add a Breaks: for the upstart versions that don't yet have the necessary
+    Xsession.d fixes for systemd user sessions yet.
+  * Depend on dbus-user-session and the systemd version that provides
+    graphical-session.target.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Sun, 31 Jul 2016 12:00:45 +0200
+
+xubuntu-default-settings (16.04.6) xenial; urgency=medium
+
+  * etc/skel/.config/libreoffice/4/user/registrymodifications.xcu
+    - Set elementary as the default icon theme (LP: #1569968)
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sun, 17 Apr 2016 08:01:57 -0400
+
+xubuntu-default-settings (16.04.5) xenial; urgency=medium
+
+  * Drop "Contribute to Xubuntu" and "Xubuntu Website"
+    links, now included in documentation (LP: #1537742)
+    - etc/xdg/xdg-xubuntu/menus/xfce-applications.menu
+    - usr/share/xubuntu/applications/po/POTFILES.in
+    - usr/share/xubuntu/applications/po/xds-desktop-files.pot
+    - usr/share/xubuntu/applications/xubuntu-contribute.desktop.in
+    - usr/share/xubuntu/applications/xubuntu-website.desktop.in
+  * Hide ImageMagick Q16 links from the menu (LP: #1549732)
+    - etc/xdg/xdg-xubuntu/menus/xfce-applications.menu
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Wed, 13 Apr 2016 19:47:11 -0400
+
+xubuntu-default-settings (16.04.4) xenial; urgency=medium
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/parole.xml
+    - Set default video sink to XV
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Mon, 14 Mar 2016 22:15:29 -0400
+
+xubuntu-default-settings (16.04.3) xenial; urgency=medium
+
+  [ Unit 193 ]
+  * etc/xdg/xdg-xubuntu/menus/xfce-applications.menu,
+    etc/xdg/xdg-xubuntu/xfce4/whiskermenu/defaults.rc,
+    usr/share/xubuntu/applications/defaults.list:
+    - Change ubuntu-software-center → gnome-software.
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Wed, 02 Mar 2016 20:05:52 -0500
+
+xubuntu-default-settings (16.04.2) xenial; urgency=medium
+
+  * Update font to Noto Sans:
+    - debian/control
+    - etc/skel/.config/Trolltech.conf
+    - etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
+    - etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+    - usr/share/lightdm/lightdm-gtk-greeter.conf.d/30_xubuntu.conf
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Thu, 25 Feb 2016 21:07:36 -0500
+
+xubuntu-default-settings (16.04.1) xenial; urgency=medium
+
+  * Updated lightdm config locations:
+    - debian/60-xubuntu.conf => usr/share/lightdm/lightdm.conf.d/
+    - etc/lightdm/lightdm-gtk-greeter.conf.d/30_xubuntu.conf =>
+      usr/share/lightdm/lightdm-gtk-greeter.conf.d/
+  * Remove obsolete lightdm configuration files:
+    - debian/xubuntu-default-settings.postinst
+    - debian/xubuntu-default-settings.postrm
+    - debian/xubuntu-default-settings.preinst
+    - debian/xubuntu-default-settings.prerm
+    - debian/xubuntu-default-settings.maintscript
+  * usr/share/lightdm/lightdm-gtk-greeter.conf.d/30_xubuntu.conf
+    - Use new Plymouth themes directory (LP: #1533200)
+    - Simplify configuration, stack on 01_ubuntu.conf
+  * etc/xdg/xdg-xubuntu/xfce4/whiskermenu/defaults.rc
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+  * usr/share/xubuntu/applications/defaults.list
+    - Replace gmusicbrowser references with parole where appropriate.
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Thu, 11 Feb 2016 06:13:37 -0500
+
+xubuntu-default-settings (16.04.0) xenial; urgency=medium
+
+  * debian/xubuntu-default-settings.gsettings-override
+    - Remove gmusicbrowser from indicator-sound
+    - Add parole to indicator-sound
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/parole.xml
+    - Enable Parole MPRIS2 plugin by default
+  * debian/compat
+    - Bump debhelper version
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sun, 10 Jan 2016 22:34:13 -0500
+
+xubuntu-default-settings (15.10.3) wily; urgency=medium
+
+  * etc/X11/Xsession.d/56xubuntu-session
+    - Workaround clutter freezing gtk applications (LP: #1462445)
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/parole.xml
+    - Set parole video sink back to clutter
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sun, 06 Sep 2015 19:30:35 -0400
+
+xubuntu-default-settings (15.10.2) wily; urgency=medium
+
+  [ Robert Ancell ]
+  * debian/60-xubuntu.conf:
+    - Use [Seat:*] section for LightDM configuration instead of
+      deprecated [SeatDefaults]
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Mon, 10 Aug 2015 20:27:49 -0400
+
+xubuntu-default-settings (15.10.1) wily; urgency=medium
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+  * etc/xdg/xdg-xubuntu/xfce4/whiskermenu/defaults.rc
+  * usr/share/xubuntu/applications/defaults.list
+    - Replace Abiword and Gnumeric with LibreOffice
+  * debian/xubuntu-default-settings.preinst
+  * debian/xubuntu-default-settings.postinst
+  * debian/xubuntu-default-settings.postrm
+  * etc/lightdm/lightdm-gtk-greeter.conf.d/30_xubuntu.conf
+  * etc/xdg/xdg-xubuntu/lightdm/lightdm-gtk-greeter.conf
+    - Transition to new lightdm-gtk-greeter config
+  * etc/X11/Xsession.d/56xubuntu-session
+    - Disable Gtk 3.16 overlay scrollbars
+    - Use GTK theme for QT5 applications
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/parole.xml
+    - Workaround for parole freezing at startup (LP: #1462445)
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sun, 19 Jul 2015 00:03:49 -0400
+
+xubuntu-default-settings (15.10.0) wily; urgency=medium
+
+  * /usr/share/xfce4/whiskermenu
+    - Moved to /etc/xdg/xdg-xubuntu/xfce4/whiskermenu,
+      configuration directories moved upstream
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Mon, 25 May 2015 10:36:42 -0400
+
+xubuntu-default-settings (15.04.5) vivid; urgency=medium
+
+  [ Simon Steinbeiß ]
+  * usr/share/xubuntu/applications/xfhelp4.desktop
+    - Point to the correct page in the Help launcher
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Wed, 01 Apr 2015 06:06:50 -0400
+
+xubuntu-default-settings (15.04.4) vivid; urgency=medium
+
+  [ Sean Davis ]
+  * debian/xubuntu-default-settings.gsettings-override:
+    - Use the new xubuntu-light colorscheme in mousepad
+    - Set search direction to Both (LP: #1390933)
+  * etc/xdg/xdg-xubuntu/xfce4/terminal/terminalrc:
+    - Use the new xubuntu-dark colorscheme in the terminal
+
+  [ Simon Steinbeiß ]
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+    - Set button-icons to 16px for consistency with Gtk3
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Tue, 10 Mar 2015 19:51:00 -0400
+
+xubuntu-default-settings (15.04.3) vivid; urgency=medium
+
+  [ Unit 193 ]
+  * debian/xubuntu-default-settings.gsettings-override:
+    - Remove override for show-notify-osd-on-scroll, key removed.
+
+  [ Thaddaeus Tintenfisch ]
+  * usr/share/xubuntu/applications/thunar-settings.desktop
+    - Remove thunar-settings from the menu, redundant (LP: #1396804)
+
+  [ Sean Davis ]
+  * usr/share/polkit-1/actions/com.ubuntu.pkexec.thunar.policy.in
+    - Dropped, policy included upstream in thunar package
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sat, 21 Feb 2015 14:39:39 -0500
+
+xubuntu-default-settings (15.04.2) vivid; urgency=medium
+
+  * Prevent redefinition of maximize window in keyboard shortcuts
+    (LP: #1292290)
+  * Fix CSD windows with Compton
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Mon, 19 Jan 2015 07:15:12 -0500
+
+xubuntu-default-settings (15.04.1) vivid; urgency=medium
+
+  * Move casper-functions script below prereq (LP: #1211933)
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Wed, 03 Dec 2014 20:20:55 -0500
+
+xubuntu-default-settings (15.04.0) vivid; urgency=medium
+
+  * etc/skel/.config/Trolltech.conf:
+    - Set QT defaults to Gtk/Xubuntu defaults (LP: #1382741)
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml:
+    - Increase xfwm double-click time to 400ms to match defaults in
+      xfce4-settings.
+  * debian/xubuntu-default-settings.maintscript:
+  * etc/skel/.config/gtk-3.0/gtk.css:
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml:
+    - Restore default color scheme, no more pink unicorns.
+  * debian/control:
+    - Update to Standards Version 3.9.6, no changes needed.
+  * debian/copyright:
+    - Update maintenance date, copyright email.
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sun, 02 Nov 2014 19:27:10 -0500
+
+xubuntu-default-settings (14.10.11) utopic; urgency=medium
+
+  * Enable minimize and maximize on GtkHeaderbars (LP: #1373887)
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Thu, 25 Sep 2014 07:41:40 -0400
+
+xubuntu-default-settings (14.10.10) utopic; urgency=medium
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml,
+    etc/skel/.config/gtk-3.0/gtk.css:
+    - Color scheme refresh for 14.10 (LP: #1371554)
+
+ -- Unit 193 <unit193@ubuntu.com>  Thu, 11 Sep 2014 18:41:26 -0400
+
+xubuntu-default-settings (14.10.9) utopic; urgency=medium
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+    - Set desktop icon size to 48px
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Wed, 10 Sep 2014 22:17:21 -0400
+
+xubuntu-default-settings (14.10.8) utopic; urgency=medium
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
+    - Reenable wrap workspaces on window drag.
+  * etc/xdg/xdg-xubuntu/menus/xfce4-applications.menu
+    - Restore Settings Manager item for classic menu users
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sun, 07 Sep 2014 08:36:28 -0400
+
+xubuntu-default-settings (14.10.7) utopic; urgency=medium
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
+    - Disable wrap workspaces on window drag since we do not have a visible
+      workspace switcher.
+    - Reduce number of workspaces to 1.
+  * usr/share/xfce4/whiskermenu/defaults.rc
+    - Add new "find" command to whiskermenu to start a search with Catfish
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Tue, 02 Sep 2014 06:06:34 -0400
+
+xubuntu-default-settings (14.10.6) utopic; urgency=medium
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
+    - Use saner defaults for DPMS timeouts
+    - Enable lock-screen on suspend and hibernate
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
+    - Enable lock-screen on suspend and hibernate
+    - Remove reference to xscreensaver
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sun, 31 Aug 2014 21:47:21 -0400
+
+xubuntu-default-settings (14.10.5) utopic; urgency=medium
+
+  * debian/light-locker.desktop
+  * debian/xubuntu-live-settings.install
+    - Drop light-locker.desktop, default config no longer auto-locks
+  * etc/xdg/xdg-xubuntu/lightdm/lightdm-gtk-greeter.conf
+    - Update panel layout
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+    - Set desktop tooltip size to 64px.
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Tue, 26 Aug 2014 19:18:08 -0400
+
+xubuntu-default-settings (14.10.4) utopic; urgency=medium
+
+  * etc/xdg/xdg-xubuntu/autostart/light-locker.desktop
+    - Update default light-locker config to: enabled, lock on suspend,
+      and no auto-lock
+  * etc/xdg/xdg-xubuntu/lightdm/lightdm-gtk-greeter.conf
+    - Update to use similar appearance of previous releases
+    - Add screensaver-timeout=60 for locking
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sun, 24 Aug 2014 09:43:06 -0400
+
+xubuntu-default-settings (14.10.3) utopic; urgency=medium
+
+  * usr/share/polkit-1/actions/com.ubuntu.pkexec.thunar.policy
+    - Renamed to have com.ubuntu.pkexec prefix
+  * etc/xdg/xdg-xubuntu/xfce4/panel/default.xml
+    - Use new power manager plugin
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Thu, 21 Aug 2014 05:54:08 -0400
+
+xubuntu-default-settings (14.10.2) utopic; urgency=medium
+
+  * usr/share/polkit-1/*
+    - Add pkexec policies for supported applications.
+      - Mousepad (Fixes LP: #1358360)
+      - Thunar (Fixes LP: #1358361)
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Tue, 19 Aug 2014 06:13:33 -0400
+
+xubuntu-default-settings (14.10.1) utopic; urgency=medium
+
+  * etc/skel/.Xdefaults
+    - Remove 20px border from xscreensaver
+  * etc/xdg/xdg-xubuntu/xfce4/panel/default.xml
+    - Add xfce4-battery-plugin to panel
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/parole.xml
+    - Enable clutter as default videosink in parole
+  * etc/xdg/xdg-xubuntu/menus/xfce-applications.menu
+    - Add Settings submenu to main menu to make launchers in the Settings
+      category appear in Whisker menu (LP: #1310264)
+  * etc/xdg/xdg-xubuntu/compton.conf
+    - Add default configuration for compton
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Tue, 29 Jul 2014 23:16:04 -0400
+
+xubuntu-default-settings (14.10.0) utopic; urgency=medium
+
+  [ Robert Ancell ]
+  * debian/60-xubuntu.conf:
+  * debian/xubuntu-default-settings.install:
+  * debian/xubuntu-default-settings.maintscript:
+    - Install lightdm configuration in /usr/share not /etc and give it higher
+      priority than the ubuntu settings (LP: #1311090)
+
+  [ Unit 193 ]
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+    - Set default icon size to 32.
+    
+  [ Sean Davis ]
+  * debian/changelog:
+    - Update Standards-Version to 3.9.5
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
+    - Disable logind-handle-lid-switch for users of light-locker (LP: #1303736)
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Tue, 15 Jul 2014 22:12:37 -0400
+
+xubuntu-default-settings (14.04.4) trusty; urgency=medium
+
+  * Set default wallpaper key for gsettings based applications, e.g. such
+    that ubiquity installer paints correct background. (LP: #1284910)
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 09 Apr 2014 16:10:38 +0100
+
+xubuntu-default-settings (14.04.3) trusty; urgency=medium
+
+  * Update keyboard-shortcut for appmenu to point to whiskermenu (new default)
+  * Restore previous xfdesktop's default settings (LP: #1297170)
+  * Use "zoom" mode by default again in xfdesktop
+  * Associate docx files with Abiword (LP: #1141885)
+  * Remove jockey.desktop as it is provided in software-properties now (LP: #1060543)
+
+ -- Simon Steinbeiß <ochosi@shimmerproject.org>  Mon, 07 Apr 2014 14:59:32 +0100
+
+xubuntu-default-settings (14.04.2) trusty; urgency=low
+
+  [ Simon Steinbeiß ]
+  * Update whiskermenu defaults for 14.04 (UIFe: LP: #1295864, LP: #1285440, #1286846)
+    - add usr/share/xfce4/whiskermenu/defaults.rc
+    - remove etc/xdg/xdg-xubuntu/xfce4/panel/whiskermenu-1.rc
+  * Update 14.04.1 changelog to reflect what was uploaded
+  * Fix wallpaper defaults (LP: #1271713)
+    - update etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+  * Disable scroll-to-switch-workplace and scrolling to shade a window since
+    these were confusing users
+    - update etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
+
+ -- Micah Gersten <micahg@ubuntu.com>  Mon, 24 Mar 2014 14:46:30 -0500
+
+xubuntu-default-settings (14.04.1) trusty; urgency=medium
+
+  * defaults.list - Use parole for mpegurl mimetype (lp: #1221426)
+  * xubuntu-default-settings.gsettings-override - Remove unsupported key (lp: #1227637)
+  * debian/control - Update standards version to 3.9.4
+  * debian/copyright - Update to latest format specification
+  * debian/xubuntu-live-settings.install
+  * debian/light-locker.desktop
+    - Prevent autostart of light-locker in live session (see LP: #1281323)
+  * Update xfce4-panel layout
+  * Update keyboard-shortcuts
+  * Update default greeter settings
+  * New default terminal font: DejaVu Sans Mono 9
+  * Hide xfce4-powermanager's trayicon by default
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Tue, 18 Feb 2014 22:42:17 -0500
+
+xubuntu-default-settings (14.04.0) trusty; urgency=low
+
+  * Automated translations updates
+  * Use /etc/lightdm.d/10-xubuntu.conf to set session, now that
+    lightdm-set-defaults is gone. (LP: #1259525)
+
+ -- Unit 193 <unit193@ubuntu.com>  Wed, 15 Jan 2014 06:41:08 -0600
+
+xubuntu-default-settings (13.10.5) saucy; urgency=low
+
+  * New wallpaper for saucy (lp: #1228098):
+    - etc/xdg/xdg-xubuntu/lightdm/lightdm-gtk-greeter.conf,
+      etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml:
+      updated to point to the new wallpaper.
+
+ -- Simon Steinbeiss <ochosi@shimmerproject.org>  Fri, 20 Sep 2013 14:44:08 +0200
+
+xubuntu-default-settings (13.10.4) saucy; urgency=low
+
+  * Added clock configuration to lightdm-gtk-greeter.conf
+  * Added on-screen keyboard for accessibility to lightdm-gtk-greeter.conf
+
+  * Automated translations updates
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Tue, 27 Aug 2013 22:28:00 -0500
+
+xubuntu-default-settings (13.10.3) saucy; urgency=low
+
+  * Added jockey/Additional Drivers launcher to settings.
+  * Change Primary+Esc to call xfce4-popup-applicationsmenu (Application menu.)
+
+ -- Unit 193 <unit193@ubuntu.com>  Thu, 18 Jul 2013 00:03:17 -0500
+
+xubuntu-default-settings (13.10.2) saucy; urgency=low
+
+  [ Simon Steinbeiss ]
+  * Add Ctrl+Alt+T keyboard-shortcut to launch the default terminal emulator.
+
+  [ Lionel Le Folgoc ]
+  * Set elementary-xfce-darker as the default icon theme.
+  * Migrate some default settings from dh_gconf to dh_installgsettings.
+
+ -- Simon Steinbeiss <ochosi@shimmerproject.org>  Fri, 05 Jul 2013 18:56:53 +0200
+
+xubuntu-default-settings (13.10.1) saucy; urgency=low
+
+  [ Craig Hrabal ]
+  * debian/control - Fixed typo in package description. lp: #1168391
+
+  [ Sean Davis ]
+  * xfce4-desktop.xml: use the correct path to the wallpaper.
+
+  [ Len Ovens ]
+  * Fix applications menu to allow menu merging (LP: #1187619).
+
+ -- Len Ovens <len@ovenwerks.net>  Tue, 04 Jun 2013 20:33:00 -0700
+
+xubuntu-default-settings (13.10.0) saucy; urgency=low
+
+  * Depend on fonts-droid rather than transitional ttf-droid (LP: #1181762).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sun, 19 May 2013 22:33:10 +0100
+
+xubuntu-default-settings (13.04.3) raring; urgency=low
+
+  * Let Super+e point to mousepad, as leafpad isn't installed by default
+    anymore. lp: #1154030
+  * usr/share/xubuntu/applications/defaults.list: same, switch from leafpad
+    to mousepad.
+  * Refreshed translations from lp.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 17 Mar 2013 00:07:45 +0100
+
+xubuntu-default-settings (13.04.2) raring; urgency=low
+
+  * Add a Contribute to Xubuntu menu entry linking to the Xubuntu website
+    - add usr/share/xubuntu/applications/xubuntu-contribute.desktop
+    - update etc/xdg/xdg-xubuntu/menus/xfce-applications.menu
+  * Add a link to the Xubuntu website
+    - add usr/share/xubuntu/applications/xubuntu-website.desktop
+    - update etc/xdg/xdg-xubuntu/menus/xfce-applications.menu
+  * Update link to GPLv2 license to appease lintian
+    - update debian/copyright 
+
+ -- Micah Gersten <micahg@ubuntu.com>  Sun, 03 Mar 2013 16:54:43 -0600
+
+xubuntu-default-settings (13.04.1) raring; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * Updated translations.
+  * Drop Thunar's conffile (thunarrc) as it now uses xfconf.
+
+  [ Simon Steinbeiß ]
+  * Switch default size of Thunar's sidebar icons to 16px.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 02 Mar 2013 19:47:25 +0100
+
+xubuntu-default-settings (13.04.0) raring; urgency=low
+
+  * Updated translations.
+  * Handle the migration of xfce4-terminal's conffile to its new location.
+  * etc/xdg/xdg-xubuntu/xfce4/helpers.rc: updated, the default Terminal
+    helper has been renamed to xfce4-terminal.
+  * Rebase our lightdm-gtk-greeter.conf against the upstream one.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 10 Feb 2013 20:55:23 +0100
+
+xubuntu-default-settings (12.10.7) quantal; urgency=low
+
+  * Remove the GIMP launcher from the bottom panel since it's not installed
+    by default anymore. lp: #1051493
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Mon, 17 Sep 2012 21:31:12 +0200
+
+xubuntu-default-settings (12.10.6) quantal; urgency=low
+
+  * Let lightdm-gtk-greeter use the dotless wallpaper. lp: #1043170
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 15 Sep 2012 15:54:28 +0200
+
+xubuntu-default-settings (12.10.5) quantal; urgency=low
+
+  * etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: don't exclude package
+    managers. lp: #1043151
+  * etc/xdg/xdg-xubuntu/lightdm/lightdm-gtk-greeter.conf: update logo
+    (lp: #1043176) and background image (lp: #1043170).
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml:
+    update path to wallpaper. lp: #1043170
+  * debian/control: bump xubuntu-artwork dep to >= 12.10.1~ for the new wp.
+  * etc/xdg/xdg-xubuntu/xfce4/panel/default.xml: drop thunar-tpa and include
+    catfish in the bottom panel.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 29 Aug 2012 19:41:42 +0200
+
+xubuntu-default-settings (12.10.4) quantal; urgency=low
+
+  * etc/xdg/xdg-xubuntu/menus/*.menu:
+    - updated to show more Settings' apps in xfce4-settings-manager,
+    per other-q-xubuntu-settings-manager-launchers. lp: #1040902
+    - fix typo, xfrun4.desktop is actually named xfce4-run.desktop.
+  * etc/xdg/xdg-xubuntu/Terminal/terminalrc: updated, improved color scheme
+    and default font. lp: #1041892
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 29 Aug 2012 01:50:33 +0200
+
+xubuntu-default-settings (12.10.3) quantal; urgency=low
+
+  * Replace datetime by clock now that it features a calendar as well.
+  * Switch gtk-greeter to Greybird+elementary-xfce until the fate of
+    Greybird-lightdm is decided.
+  * usr/share/xubuntu/applications/xfhelp4.desktop: fixed to use exo-open
+    instead of xfbrowser4 (was part of xfce4-utils, obsolete with 4.10).
+  * etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: updated settings items
+    to ignore with Xfce 4.10.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 23 Aug 2012 21:01:56 +0200
+
+xubuntu-default-settings (12.10.2) quantal; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-session.xml:
+    - enable support of GNOME services for smooth integration with
+      gnome-keyring. lp: #1008993
+    - replace xfce4-settings-helper with xfsettingsd.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 24 Jun 2012 13:51:01 +0200
+
+xubuntu-default-settings (12.10.1) quantal; urgency=low
+
+  * Migrate panel config to 4.10 format.
+  * Migrate indicator-plugin config from XfceRc to Xfconf.
+  * Drop conffile migration code for 4.6 -> 4.8 upgrades.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Tue, 22 May 2012 22:42:21 +0200
+
+xubuntu-default-settings (12.10.0) quantal; urgency=low
+
+  * debian/control: recommend xfce4-session, libxfce4ui-utils instead of
+    xfce4-utils, deprecated with Xfce 4.10.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 19 May 2012 20:33:43 +0200
+
+xubuntu-default-settings (12.04.11) precise; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/panel: replace clock with datetime (no visual
+    change, the same format string is used). lp: #972388,#972402
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 04 Apr 2012 18:48:08 +0200
+
+xubuntu-default-settings (12.04.10) precise; urgency=low
+
+  * Refreshed translations.
+  * debian/xubuntu-default-settings.gsettings-override: fix dbus service name
+    for indicator-sound. lp: #963114
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Fri, 30 Mar 2012 23:46:09 +0200
+
+xubuntu-default-settings (12.04.9) precise; urgency=low
+
+  * etc/xdg/xdg-xubuntu/Terminal/terminalrc: small fix for the weird red color
+    contrast to blue. lp: #955444
+  * usr/share/xubuntu/applications/defaults.list: updated a few associations
+    still using obsolete default apps.
+  * debian/control: drop the explicit dependency on lightdm, it's confusing
+    update-manager (which ends up installing unity-greeter first).
+  * etc/xdg/xdg-xubuntu/lightdm/lightdm-gtk-greeter.conf: switch to its special
+    Greybird-lightdm gtk+ theme.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 18 Mar 2012 13:21:01 +0100
+
+xubuntu-default-settings (12.04.8) precise; urgency=low
+
+  * Revert r354 and show nm-applet again
+    - update debian/xubuntu-default-settings.gconf-defaults
+
+ -- Micah Gersten <micahg@ubuntu.com>  Tue, 28 Feb 2012 04:11:39 -0600
+
+xubuntu-default-settings (12.04.7) precise; urgency=low
+
+  * etc/xdg/xdg-xubuntu/Terminal/terminalrc: add a color theme matching
+    Greybird colors. lp: #938779
+  * usr/share/xubuntu/applications/defaults.list:
+    - refreshed for precise.
+    - add the exo wrappers as default scheme handlers, so that programs
+      set through exo-preferred-applications are actually used by default.
+      lp: #922264
+  * debian/xubuntu-default-settings.gconf-defaults: hide nm-applet from the
+    systray by default (required since yesterday's upload).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 23 Feb 2012 20:17:38 +0100
+
+xubuntu-default-settings (12.04.6) precise; urgency=low
+
+  * Show language selector in lightdm.
+  * Set new default wallpapers for precise.
+  * Update default theme name.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 19 Feb 2012 13:00:27 +0100
+
+xubuntu-default-settings (12.04.5) precise; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-keyboard-shortcuts.xml: update
+    default shortcuts, per 'other-p-xubuntu-default-shortcuts' spec.
+
+  [ Colin Watson ]
+  * Use maintscript support in dh_installdeb rather than writing out
+    dpkg-maintscript-helper commands by hand.  We now simply Pre-Depend on a
+    new enough version of dpkg rather than using 'dpkg-maintscript-helper
+    supports' guards, leading to more predictable behaviour on upgrades.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 12 Feb 2012 16:05:51 +0100
+
+xubuntu-default-settings (12.04.4) precise; urgency=low
+
+  * etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: clean up to drop unneeded
+    delta wrt to upstream, and stop using desktop-directory files from
+    gnome-menus.
+  * debian/control: stop recommending gnome-menus.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-session.xml: set xscreensaver as
+    the default screensaver.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Mon, 06 Feb 2012 17:54:34 +0100
+
+xubuntu-default-settings (12.04.3) precise; urgency=low
+
+  * Correctly set /Xft/* xfconf props.
+  * Try to set the correct settings so that qt apps look less ugly in the
+    default xubuntu session.
+  * Refresh translations for Thunar custom actions (Polish, Basque).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 04 Feb 2012 21:18:47 +0100
+
+xubuntu-default-settings (12.04.2) precise; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-session.xml: pass --replace to
+    xfwm4 by default.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xsettings.xml: set elementary-xfce-dark
+    as default icon theme.
+  * debian/control: bump dep on xubuntu-artwork to >= 12.04.0~.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Mon, 23 Jan 2012 00:27:10 +0100
+
+xubuntu-default-settings (12.04.1) precise; urgency=low
+
+  * Use gsettings instead of gconf to set update-notifier's auto-launch key.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-keyboard-shortcuts.xml: updated a
+    few shortcuts to work with latest gtk+2.0.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/thunar-volman.xml: fix default player
+    for audio cds. lp: #901766
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 05 Jan 2012 00:15:27 +0100
+
+xubuntu-default-settings (12.04.0) precise; urgency=low
+
+  * Fix broken theme in only-ubiquity mode (lp: #840094):
+    - debian/control: add a new xubuntu-live-settings binary package.
+    - debian/{gconf-defaults,post*,pre*}: renamed to
+      debian/xubuntu-default-settings.*.
+    - debian/*.install: added, now that we have several binary packages.
+    - casper/48xubuntu_maybe_ubiquity: added, stolen from
+      mythbuntu-live-autostart.
+  * debian/xubuntu-default-settings.gconf-defaults: fix default command to
+    browse a device with blueman. lp: #882621
+  * etc/xdg/xdg-xubuntu/Terminal/terminalrc: reduce the default font size
+    for xfce4-terminal. lp: #752886
+  * etc/skel/.xscreensaver: added, set blank mode by default. lp: #799268
+  * Call dh_installgsettings instead of manually shipping an override file.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 19 Nov 2011 20:39:27 +0100
+
+xubuntu-default-settings (11.10.6) oneiric; urgency=low
+
+  * Finally add the lightdm greeter theme! lp: #861309
+  * etc/xdg/xdg-xubuntu/lightdm/lightdm-gtk-greeter.conf: added.
+  * debian/{postinst,prerm}: install/remove alternatives to use our config
+    as /etc/lightdm/lightdm-gtk-greeter.conf.
+  * debian/control:
+    - add depends on lightdm-gtk-greeter >= 1.0.0-0ubuntu2
+    - provides lightdm-gtk-greeter-config.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 28 Sep 2011 21:58:53 +0200
+
+xubuntu-default-settings (11.10.5) oneiric; urgency=low
+
+  * etc/xdg/xdg-xubuntu/Thunar/po,
+    usr/share/xsessions/xubuntu.desktop: refreshed translations.
+  * debian/control: recommends gnome-menus, as our default menu uses some of
+    its files (it still works without them, but some categories may appear
+    untranslated).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Tue, 27 Sep 2011 23:33:34 +0200
+
+xubuntu-default-settings (11.10.4) oneiric; urgency=low
+
+  * usr/share/xubuntu/applications/debian-{,u}xterm.desktop: added, hide them
+    from the default Xubuntu menu. lp: #836311
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Fri, 02 Sep 2011 23:05:34 +0200
+
+xubuntu-default-settings (11.10.3) oneiric; urgency=low
+
+  * debian/control: bump minimal required lightdm version for
+    lightdm-set-defaults.
+  * usr/share/xubuntu/lightdm: dropped, probably not needed anymore, we'll
+    see.
+  * debian/postinst,debian/postrm: set xubuntu as the default session and
+    lightdm-gtk-greeter as the default greeter if they aren't set already.
+    Remove them on uninstall. (thanks Didier!)
+  * debian/preinst,debian/prerm,debian/postinst: clean up the alternatives
+    introduced in the previous upload.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 13 Aug 2011 21:42:17 +0200
+
+xubuntu-default-settings (11.10.2) oneiric; urgency=low
+
+  * debian/postinst,debian/prerm: set up alternatives for lightdm.conf and
+    default.desktop.
+  * debian/control: depends on the proper revisions of x11-common and lightdm
+    for the features we use, and drop gdm from recommends.
+  * usr/share/xubuntu/lightdm/lightdm.conf: added, disables guest session.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Mon, 01 Aug 2011 19:47:18 +0200
+
+xubuntu-default-settings (11.10.1) oneiric; urgency=low
+
+  * debian/{preinst,postint,postrm}: cleanup, remove natty-specific code, and
+    also gdm-specific code now that we use lightdm by default.
+  * usr/share/xubuntu/session.sh: dropped, now that x11-common sets the needed
+    XDG vars, using startxfce4 is enough.
+  * usr/share/xsessions:
+    - xubuntu.desktop.in, po/: dropped, not needed anymore.
+    - xubuntu.desktop: added, generated from xfce.desktop.
+  * debian/control:
+    - reword descriptions.
+    - recommends xfce4-utils, and either lightdm or gdm.
+  * usr/share/xubuntu/applications/defaults.list: updated for the latest seed
+    changes.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Mon, 25 Jul 2011 00:02:20 +0200
+
+xubuntu-default-settings (11.10.0) oneiric; urgency=low
+
+  * usr/share/xubuntu/session.sh: export the correct XDG_CONFIG_DIRS.
+  * usr/share/xubuntu/applications/defaults.list: updated for the latest seed
+    changes.
+  * Refreshed translations.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 19 Jun 2011 18:53:17 +0200
+
+xubuntu-default-settings (11.04.18) natty; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfwm4.xml: show the window content
+    on resize/move. lp: #749665
+  * Updated translations.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Tue, 05 Apr 2011 20:19:47 +0200
+
+xubuntu-default-settings (11.04.17) natty; urgency=low
+
+  * Move etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-panel.xml to
+    etc/xdg/xdg-xubuntu/xfce4/panel/default.xml: this is the correct place
+    to store the default settings, and avoid any weird issue when removing
+    a panel.                                                        lp: #747137
+  * Handle the move in the maintainer scripts as well.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Fri, 01 Apr 2011 22:31:55 +0200
+
+xubuntu-default-settings (11.04.16) natty; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-desktop.xml: set
+    'xubuntu-greybird.png' as the new default wallpaper.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Fri, 18 Mar 2011 22:12:19 +0100
+
+xubuntu-default-settings (11.04.15) natty; urgency=low
+
+  * etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: fix missing education
+    category icon, by using gnome-menu's Education.directory.
+  * usr/share/xubuntu/desktop-directories: dropped, unneeded.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 16 Mar 2011 22:33:56 +0100
+
+xubuntu-default-settings (11.04.14) natty; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-notifyd.xml: set initial opacity
+    value to 85%.
+  * usr/share/xubuntu/applications/xfce4-session-logout.desktop: dropped,
+    unneeded with the latest greybird.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 13 Mar 2011 17:39:30 +0100
+
+xubuntu-default-settings (11.04.13) natty; urgency=low
+
+  * usr/share/xubuntu/applications/aumix.desktop: dropped, aumix isn't in
+    the default install anymore, no need to hide it.
+  * etc/xdg/xdg-xubuntu/xfce4/panel/indicator-5.rc: ignore indicator-{appmenu,
+    datetime,me,session} by default.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Tue, 08 Mar 2011 21:22:14 +0100
+
+xubuntu-default-settings (11.04.12) natty; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfwm4.xml: really use only two
+    workspaces, the setting was probably lost at some point.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Mon, 07 Mar 2011 00:13:23 +0100
+
+xubuntu-default-settings (11.04.11) natty; urgency=low
+
+  * usr/share/glib-2.0/schemas/xubuntu-default-settings.gschema.override:
+    add gmusicbrowser to the interested media players, and disable sound
+    notifications on scroll, xfce4-volumed does that already.
+  * Correctly purge cpugraph config.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-panel.xml: reintroduce the
+    workspace switcher.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Fri, 04 Mar 2011 19:03:20 +0100
+
+xubuntu-default-settings (11.04.10) natty; urgency=low
+
+  * debian/copyright: refreshed, and updated to use current DEP5 draft
+    format instead of an obsolete wiki draft (changes taken from
+    linaro-alip-default-settings, thanks!).
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-panel.xml:
+    - launchers: replace exaile by gmusicbrowser.
+    - plugins: drop cpugraph and xfce4-mixer and use indicator instead.
+  * etc/xdg/xdg-xubuntu/exaile/settings.ini: dropped (handled in maintainer
+    scripts as well).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 24 Feb 2011 22:08:55 +0100
+
+xubuntu-default-settings (11.04.9) natty; urgency=low
+
+  * usr/share/xubuntu/applications/xfce4-session-logout.desktop:
+    refreshed translations.
+  * usr/share/xubuntu/desktop-directories/xfce-network.directory,
+    etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: renamed 'Network'
+    category to 'Internet'. lp: #79053
+  * usr/share/xubuntu/applications/*,
+    etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: reworked the menu
+    to show exo wrappers by default. lp: #718177
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 17 Feb 2011 00:06:33 +0100
+
+xubuntu-default-settings (11.04.8) natty; urgency=low
+
+  * usr/share/xubuntu/desktop-directories/,
+    etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: put back the exo
+    wrappers in a special submenu "Preferred Applications"; previously
+    they were hidden by the menu file and thus were not usable as launchers
+    in the panel (see lp #718177).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 13 Feb 2011 19:56:12 +0100
+
+xubuntu-default-settings (11.04.7) natty; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-keyboard-shortcuts.xml:
+    resync default keyboard shortcuts with upstream; mostly add shortcuts
+    for 'xfce4-display-settings --minimal'. lp: #713967
+  * etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: small cleanup; hide
+    more duplicate entries. Also add a missing <DefaultMergeDirs/> tag.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/xfce4-panel.xml: use exo wrappers
+    instead of firefox/thunderbird/xfce4-terminal directly; this allows
+    users to change the preferred applications and to keep functional
+    launchers.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/…/thunar-volman.xml: disable
+    'autoopen' and 'autorun' features by default.
+  * usr/share/xubuntu/applications/defaults.list: replace gdebi by
+    ubuntu-software-center and ooo2-* by libreoffice-*.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 12 Feb 2011 01:18:58 +0100
+
+xubuntu-default-settings (11.04.6) natty; urgency=low
+
+  * usr/share/xubuntu/applications/Thunar-bulk-rename.desktop,
+    usr/share/xubuntu/applications/Thunar.desktop: added (were previously
+    in thunar); hide Bulk Rename from the menu (lp: #441278); display
+    thunar in Accessories, not System.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml:
+    replace xfce4-orageclock-plugin by the simpler clock plugin from
+    the panel; let it use the same exact time/date format as orageclock
+    did, and set the hidden "command" property to launch orage when
+    double-clicking on the time, to reproduce a feature of orageclock.
+  * etc/xdg/xdg-xubuntu/xfce4/panel/xfce4-orageclock-plugin-7.rc: dropped,
+    not needed anymore. Also handle its removal in maintainer scripts.
+  * etc/xdg/xdg-xubuntu/orage/oragerc: updated, start visible by default,
+    and don't use the dynamic icon in the systray, prefer a static one.
+  * usr/share/xubuntu/applications/xfce4-terminal.desktop: added (was
+    previously in xfce4-terminal); remove xfce4-terminal from the 'System'
+    category.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 09 Feb 2011 21:33:04 +0100
+
+xubuntu-default-settings (11.04.5) natty; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml: set
+    back elementaryXubuntu by default, we need to override a few elementary
+    icons anyway.
+  * etc/xdg/xdg-xubuntu/xfce4/helpers.rc: set Thunar as default file manager.
+    lp: #709147
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 29 Jan 2011 15:37:06 +0100
+
+xubuntu-default-settings (11.04.4) natty; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-notifyd.xml:
+    set greybird as default theme as well.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml: use
+    elementary-mono-dark instead of elementary by default.
+  * etc/xdg/xdg-xubuntu/orage/oragerc: added, default orage config.
+  * etc/xdg/xdg-xubuntu/xfce4/panel/*: dropped all rc files for the 4.6 panel.
+  * etc/xdg/xdg-xubuntu/xfce4/panel/cpugraph-3.rc,
+    etc/xdg/xdg-xubuntu/xfce4/panel/xfce4-orageclock-plugin-7.rc,
+    etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml:
+    ship a new default layout for the 4.8 panel.
+  * debian/postinst,debian/postrm,debian/preinst: handle the removal of the
+    4.6 panel config.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 26 Jan 2011 23:14:45 +0100
+
+xubuntu-default-settings (11.04.3) natty; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml: fix
+    typo.
+  * debian/control: relax dep on xubuntu-artwork (>= 11.04.0~ is enough).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Tue, 25 Jan 2011 22:32:12 +0100
+
+xubuntu-default-settings (11.04.2) natty; urgency=low
+
+  * etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: refreshed for Xfce 4.8.
+  * etc/xdg/xdg-xubuntu/Terminal/terminalrc: set Droid Sans Mono as default
+    font.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml:
+    - set Greybird as default gtk+ theme and put back elementary as default
+      icon theme
+    - set Droid Sans as default font.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml:
+    - clean up for Xfce 4.8
+    - set Droid Sans Bold as default font
+    - set Greybird as default theme, and “menu|title|min|max|close” as
+      default layout
+    - activate the compositor by default.
+  * debian/control: require xubuntu-artwork >> 11.04.1 for Greybird, and
+    ttf-droid.
+  * Refreshed translations.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Tue, 25 Jan 2011 21:59:30 +0100
+
+xubuntu-default-settings (11.04.1) natty; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-notifyd.xml:
+    added, default config for xfce4-notifyd (top right corner, uses the user
+    gtk theme, and 80% opacity).
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml:
+    put back the 'Hibernate' and 'Suspend' buttons by default, xfce4-session
+    now locks the screen automatically.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 09 Jan 2011 22:54:50 +0100
+
+xubuntu-default-settings (11.04.0) natty; urgency=low
+
+  * Rename etc/xdg/xdg-xubuntu/applications to usr/share/xubuntu/applications:
+    - usr/share/xubuntu/session.sh: update XDG_DATA_DIRS consequently.
+  * Use the same names as upstream for our help & logout desktop files, so
+    the upstream ones will be overridden in an xubuntu session, and the xubuntu
+    ones not visible in an xfce session, thanks to the xdg dirs' magic.
+    lp: #644969
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml: do
+    not enable gnome services by default anymore, this option also enables the
+    autostart of desktop files containing 'OnlyShowIn=GNOME;'.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/thunar-volman.xml:
+    added.
+  * debian/{preinst,postinst,postrm}: handle removal of old xdg config files.
+  * usr/share/xubuntu/applications/aumix.desktop: added, only used to hide the
+    entry by default instead of adding another hack in the menu file.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Fri, 17 Dec 2010 21:17:45 +0100
+
+xubuntu-default-settings (10.10.4) maverick; urgency=low
+
+  * usr/share/applications/xubuntu-help.desktop: refreshed translations.
+  * usr/share/applications/xubuntu-logout.desktop: avoid using a light
+    monochrome icon on the light xfce menu.
+  * etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: display
+    'xubuntu-logout.desktop' instead of 'xfce4-logout.desktop' by default.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 15 Sep 2010 23:00:15 +0200
+
+xubuntu-default-settings (10.10.3) maverick; urgency=low
+
+  * Refreshed translations.
+  * etc/xdg/xdg-xubuntu/applications/defaults.list: open crash files using
+    apport by default instead of a text editor. lp: #610284
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml: switch to Bluebird.
+  * debian/control: depends on xubuntu-artwork (>> 10.10.0).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 25 Aug 2010 23:03:32 +0200
+
+xubuntu-default-settings (10.10.2) maverick; urgency=low
+
+  * Refreshed translations.
+  * debian/control: bumped Standard-Version to 3.9.1.
+  * Drop pre-lucid code:
+    - debian/postinst: drop conffile moving
+    - debian/preinst: dropped, unneeded.
+  * etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: hide aumix menu entry
+    and move software center toward the bottom, thanks Jim Campbell.
+    lp: #365083
+  * etc/skel/.Xdefaults: set a correct OOo lcd filter. lp: #486315
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 15 Aug 2010 17:22:46 +0200
+
+xubuntu-default-settings (10.10.1) maverick; urgency=low
+
+  * etc/xdg/xdg-xubuntu/autostart/xfce4-tips-autostart.desktop: disable tips
+    on login. lp: #584879
+  * etc/xdg/xdg-xubuntu/applications/defaults.list: replace 'totem.desktop'
+    by 'parole.desktop'.
+  * etc/xdg/xdg-xubuntu/Thunar/volmanrc: replace totem by parole and brasero
+    by xfburn.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 27 Jun 2010 22:52:46 +0200
+
+xubuntu-default-settings (10.10.0) maverick; urgency=low
+
+  * Refreshed translations.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml:
+    - do not save the session on logout by default
+    - hide "hibernate" and "suspend" buttons. lp: #121737
+  * Switch to dpkg-source 3.0 (native) format.
+  * Bump Standards-Version to 3.8.4, no change required.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 13 May 2010 13:19:57 +0200
+
+xubuntu-default-settings (10.04.8) lucid-proposed; urgency=low
+
+  * usr/share/xubuntu/session.sh:
+    - Do not forcefully set $XDG_CONFIG_DIRS, it creates issue with non-Xfce
+      applications, and 60xdg_path-on-session from gdm already takes care of
+      that. lp: #571133
+    - Ensure that /usr/local/share is present in $XDG_DATA_DIRS. lp: #574264
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Mon, 03 May 2010 20:15:27 +0200
+
+xubuntu-default-settings (10.04.7) lucid; urgency=low
+
+  * Refreshed translations.
+  * etc/xdg/xdg-xubuntu/menus/xfce-applications.menu: hide duplicate
+    entries from the settings menu, as discussed in the previous meeting,
+    and summed up at
+    <https://lists.ubuntu.com/archives/xubuntu-devel/2010-April/007435.html>.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Tue, 13 Apr 2010 21:22:44 +0200
+
+xubuntu-default-settings (10.04.6) lucid; urgency=low
+
+  * Refreshed translations.
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-mixer.xml,
+    etc/xdg/xdg-xubuntu/xfce4/panel/xfce4-mixer-plugin-5.rc: revert changes
+    from 10.04.4, gstreamer pulseaudio bindings aren't really usable.
+    lp: #553925
+  * etc/xdg/xdg-xubuntu/Thunar/volmanrc: use the correct command to play
+    audio cds. lp: #559758
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 10 Apr 2010 17:03:48 +0200
+
+xubuntu-default-settings (10.04.5) lucid; urgency=low
+
+  * etc/xdg/xdg-xubuntu/*.rc => etc/xdg/xdg-xubuntu/xfce4/*.rc,
+    debian/{pre,post}inst: fixed a bug introduced in a previous upload
+    (maybe 10.04.0), use correct config dir.
+  * etc/xdg/xdg-xubuntu/xfce4/mount.rc: fix default permissions with
+    vfat. lp: #193844
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 06 Mar 2010 11:43:57 +0100
+
+xubuntu-default-settings (10.04.4) lucid; urgency=low
+
+  * Add a default Xdefaults settings file. lp: #361678
+  * etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-mixer.xml,
+    etc/xdg/xdg-xubuntu/xfce4/panel/xfce4-mixer-plugin-5.rc: set default
+    controls for xfce4-mixer, its panel plugin and xfce4-volumed. lp: #343692
+  * Refreshed translations.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 04 Mar 2010 21:39:44 +0100
+
+xubuntu-default-settings (10.04.3) lucid; urgency=low
+
+  * etc/xdg/xdg-xubuntu/xfce4/panel/xfce4-menu-1.rc.in: updated to use
+    the new menu logo.
+  * Refreshed translations.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 17 Feb 2010 23:13:31 +0100
+
+xubuntu-default-settings (10.04.2) lucid; urgency=low
+
+  * Set up translations for /usr/share/xsessions/xubuntu.desktop.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 14 Feb 2010 22:27:12 +0100
+
+xubuntu-default-settings (10.04.1) lucid; urgency=low
+
+  * debian/postinst,debian/preinst: fix version checks and typo in the case
+    statement.
+  * etc/xdg/xdg-xubuntu/xfce4/panel/xfce4-menu-1.rc.in: use default menu
+    instead of pointing directly to our menu file. As $XDG_CONFIG_DIRS var
+    is correctly set, nothing will change, except that it'll update itself
+    automagically if we move our config dir later.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 28 Jan 2010 21:26:00 +0100
+
+xubuntu-default-settings (10.04.0) lucid; urgency=low
+
+  * New versioning scheme, includes the release version.
+  * Rename etc/xdg/xubuntu to etc/xdg/xdg-xubuntu, to use the new "feature"
+    added in gdm by Didier lp: #327926
+    - etc/xdg/xubuntu => etc/xdg/xdg-xubuntu
+    - Makefile,etc/xdg/xdg-xubuntu/xfce4/panel/{launcher-2,xfce4-menu-1}.rc.in:
+      update paths
+    - debian/p{re,ost}inst: handle conffiles' moves.
+  * Change default session to xubuntu (xfce will be a vanilla xfce session)
+    - usr/share/{xsessions/xubuntu.desktop,xubuntu/session.sh}: added
+    - debian/post{inst,rm}: set new default session to 'xubuntu'.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 27 Jan 2010 21:44:35 +0100
+
+xubuntu-default-settings (0.71) lucid; urgency=low
+
+  * etc/xdg/xubuntu/Thunar/volmanrc: use 'totem %d' instead of 'totem dvd:/'
+    lp: #459490
+  * etc/xdg/xubuntu/Terminal/terminalrc: added, enables vte's scrolling
+    alternate screen by default. lp: #358796
+  * New translations: da (panel config), pl (panel & thunar).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 09 Jan 2010 13:22:11 +0100
+
+xubuntu-default-settings (0.70) lucid; urgency=low
+
+  [ Didier Roche ]
+  * Change gdm default session handling: (LP: #403291)
+    - remove usr/share/xsessions/default.desktop@
+    - debian/postinst:
+     + call gdm-set-default-session to add xfce as default session only if
+       no other previous default session
+     + remove divert (no more needed as was only internal to karmic cycle)
+    - debian/postrm:
+      unsetting xfce as default
+    - debian/control:
+      remove Provides/Conflicts with ubuntu-derivative-default-settings
+
+  [ Lionel Le Folgoc ]
+  * usr/share/xsessions: dropped, now empty.
+
+ -- Didier Roche <didrocks@ubuntu.com>  Sat, 12 Dec 2009 23:09:23 +0100
+
+xubuntu-default-settings (0.69) lucid; urgency=low
+
+  * etc/xdg/xubuntu/menus/xfce-applications.menu: replace all occurrences of
+    'gnome-app-install-xfce.desktop' with 'ubuntu-software-center.desktop'.
+  * debian/control:
+    - b-dep on debhelper (>= 7.0.50~) for override support
+    - drop replaces on xfce4-panel, was for a very old revision.
+  * Makefile, debian/rules: simplify, switch to rules.tiny, using overrides.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 12 Dec 2009 16:57:20 +0100
+
+xubuntu-default-settings (0.68) lucid; urgency=low
+
+  * Refreshed translations.
+  * etc/xdg/xubuntu/xfce4:
+    - helpers.rc: set default applications
+    - mount.rc: set default mount options. LP: #238702
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Tue, 10 Nov 2009 21:55:45 +0100
+
+xubuntu-default-settings (0.67) karmic; urgency=low
+
+  * debian/control: bump dependency on xubuntu-artwork to >= 0.35, required
+    for the new Albatross xfwm4 theme.
+  * etc/xdg/xubuntu/exaile/settings.ini: added, default settings for exaile.
+  * etc/xdg/xubuntu/applications/defaults.list: set exaile as default handler
+    for audio/*. LP: #441833
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 10 Oct 2009 23:29:16 +0200
+
+xubuntu-default-settings (0.66) karmic; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * Pull in new translations: Spanish.
+  
+  [ Cody A.W. Somerville ]
+  * etc/xdg/xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml:
+    - Set Albatross as default xfce4 window manager theme.
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Sat, 03 Oct 2009 20:21:24 -0300
+
+xubuntu-default-settings (0.65) karmic; urgency=low
+
+  * etc/xdg/xubuntu/applications/defaults.list: reassociate image/* to ristretto
+    instead of gpicview. LP: #432881
+  * etc/xdg/xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml: set
+    'elementaryXubuntu' as default icon theme.
+  * etc/xdg/xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml: set
+    xubuntu-karmic.png as default wallpaper.
+  * debian/control: bump dependency on xubuntu-artwork to (>= 0.34).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 27 Sep 2009 22:35:32 +0200
+
+xubuntu-default-settings (0.64) karmic; urgency=low
+
+  * usr/share/gdm: dropped, everything is in xubuntu-gdm-theme now.
+  * debian/control: bump dependency on xubuntu-artwork to (>= 0.33) for the new
+    gtk theme, drop dependency on feh.
+  * etc/xdg/xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml: set
+    Albatross as default theme.
+  * debian/xubuntu-default-settings.gconf-defaults: logo_icon_name is now set
+    in xubuntu-gdm-theme.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 19 Sep 2009 14:23:06 +0200
+
+xubuntu-default-settings (0.63) karmic; urgency=low
+
+  * Test a way to set gdm's background picture without gnome-settings-daemon:
+    - usr/share/gdm/autostart/LoginWindow/background-picture.desktop: added,
+      uses feh
+    - debian/control: depends on feh.
+  * debian/xubuntu-default-settings.gconf-defaults: revert change from previous
+    upload.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 13 Sep 2009 14:04:19 +0200
+
+xubuntu-default-settings (0.62) karmic; urgency=low
+
+  * etc/xdg/xubuntu/xfce4/panel/panels.xml:
+    - Remove thunar-tpa from default panel setup.
+  * etc/xdg/xubuntu/xfce4/panel/tasklist-2.rc:
+    - Set minamum width to 100 instead of 300.
+    - Do not show tasklist handle by default.
+  * debian/xubuntu-default-settings.gconf-defaults:
+    - Set /apps/gdm/simple-greeter/logo_icon_name back to its default value
+      'computer' as we don't have an SVG of the Xubuntu logo so it looks
+      blocky when scaled.
+  * etc/xdg/xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml:
+    - Set default theme to MurrinaXubuntu temporarily for wider testing.    
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Sun, 13 Sep 2009 02:59:10 -0300
+
+xubuntu-default-settings (0.61) karmic; urgency=low
+
+  * debian/control: provides/conflicts with ubuntu-derivative-default-settings.
+  * debian/xubuntu-default-settings.preinst: drop our diversion for
+    gnome.desktop.
+  * debian/xubuntu-default-settings.postinst: clean up our diversion.
+  * debian/xubuntu-default-settings.postrm: dropped.
+  * Provide default.desktop instead of gnome.desktop (LP: #403291, #426800).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 10 Sep 2009 20:44:24 +0200
+
+xubuntu-default-settings (0.60) karmic; urgency=low
+
+  * Pull in new translations: Arabic and Hebrew.
+  * debian/xubuntu-default-settings.{postinst,preinst}: unregister gdm config
+    with alternatives.
+  * debian/xubuntu-default-settings.prerm, etc/xdg/xubuntu/gdm/gdm.conf:
+    drop, unnecessary now.
+
+  * Add in a set of workaround that will be used until a better solution
+    to (LP: #403291) is developed (same as Mythbuntu).
+  * debian/xubuntu-default-settings.{preinst,postrm}: add a diversion for
+    /usr/share/xsessions/gnome.desktop so that we can make gnome.desktop be a
+    symlink to xfce.desktop since gdm now looks for gnome.desktop to pick it's
+    default session.
+  * Provide gnome.desktop to force the default session.
+
+  * etc/xdg/xubuntu/ [...] /xfce4-keyboard-shortcuts.xml: readd a shortcut for
+    xfce4-popup-menu (LP: #424282).
+
+  * usr/share/gdm/autostart/LoginWindow:
+    - xfce4-power-manager.desktop: provide xfce4-power-manager to replace
+      gnome-power-manager for gdm
+    - xfsettingsd.desktop: use xfsettings to provide a xsettings daemon
+    - xfwm4.desktop: start a window manager.
+  * debian/xubuntu-default-settings.gconf-defaults: set xubuntu-logo as
+    the default logo on the greeter.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Mon, 07 Sep 2009 22:03:32 +0200
+
+xubuntu-default-settings (0.59) karmic; urgency=low
+
+  * Refreshed translations, again.
+  * etc/xdg/xubuntu/xfce4/panel/launcher-2.rc.in: update for firefox-3.5
+    (LP: #417353).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 22 Aug 2009 15:20:37 +0200
+
+xubuntu-default-settings (0.58) karmic; urgency=low
+
+  * Pull new and updated translations from LP.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Mon, 17 Aug 2009 09:36:07 +0200
+
+xubuntu-default-settings (0.57) karmic; urgency=low
+
+  * Fix "[Xubuntu only] Non-translatable labels and launchers" (LP: #163206):
+    - etc/xdg/xubuntu/xfce4/panel:
+      + generate rc files which have translatable strings from rc.in ones
+      + po/*: added (po files fetched on 2009-05-16 from Rosetta).
+  * Fix "Thunar needs a "Find in this folder" action" (LP: #291622):
+    - etc/xdg/xubuntu/Thunar:
+      + generate uca.xml from uca.xml.in to have it translated
+      + po/*: added (po files fetched on 2009-05-16 from Rosetta).
+  * Makefile: added (useful to generate rc files without cluttering
+    debian/rules file).
+  * debian/rules: call $(MAKE) once instead of multiple dh_install.
+  * debian/control:
+    - bump debhelper dependency to >= 7 for dh_prep
+    - build-depend on intltool.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 16 May 2009 22:36:02 +0200
+
+xubuntu-default-settings (0.56) jaunty; urgency=low
+
+  * etc/xdg/xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml:
+    - Set default DPI to 96 as Xserver.org autodetection is broke.
+    - Set default RGBA value to rgb to fix ugly font issues.
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Tue, 14 Apr 2009 22:30:29 -0300
+
+xubuntu-default-settings (0.55) jaunty; urgency=low
+
+  * etc/xdg/xubuntu/menus/xfce-applications.menu: Exclude screensavers' desktop
+    files from the "Other" menu (LP: #360063).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 12 Apr 2009 19:23:24 +0200
+
+xubuntu-default-settings (0.54) jaunty; urgency=low
+
+  * etc/xdg/xubuntu/menus/xfce-applications.menu: Don't show the 
+    Screensavers menu.  It has no purpose. Instead we should be showing the
+    screensavers preferences utility. (LP: #350962)
+
+ -- Mario Limonciello <superm1@ubuntu.com>  Sat, 11 Apr 2009 10:39:41 -0500
+
+xubuntu-default-settings (0.53) jaunty; urgency=low
+
+  * etc/xdg/xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml: restore
+    "maximise window" action on double-click (apparently dropped with the
+    transition to xfconf).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 22 Mar 2009 23:16:52 +0100
+
+xubuntu-default-settings (0.52) jaunty; urgency=low
+
+  * Ship artwork in xubuntu-artwork instead of xubuntu-default-settings:
+    - usr/share/{gdm,pixmaps,themes,xfce4}: dropped
+    - depends on xubuntu-artwork (>= 0.22~)
+    - don't provide gdm-theme
+    - update debian/copyright consequently.
+  * Revert to the "old" behavior of update-manager:
+    - debian/control: add missing ${misc:Depends}
+    - debian/xubuntu-default-settings.gconf-defaults: set 'auto_launch' gconf
+      key to false
+    - debian/rules: call dh_gconf --priority=20.
+  * etc/xdg/xubuntu/menus/xfce-applications.menu:
+    - don't show in 'Other' desktop files belonging to 'X-Xfce-Toplevel'
+      category (thanks vinnl and j1mc for spotting this)
+    - don't show in 'Settings' desktop files belonging only to
+      'DesktopSettings', but rather those belonging to 'Settings' but not to
+      'System' (thanks j1mc).
+  * etc/xdg/xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml: set
+    new jaunty wallpaper.
+  * etc/xdg/xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml: set
+    'gnome-brave' as default icon theme.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 18 Mar 2009 20:38:59 +0100
+
+xubuntu-default-settings (0.51) jaunty; urgency=low
+
+  * Rename debian/postinst to debian/xubuntu-default-settings.preinst: this
+    makes more sense for conffiles handling, and this should fix alternatives
+    that were already set in debian/xubuntu-default-settings.postinst.
+  * debian/xubuntu-default-settings.preinst: delete /etc/xdg/orage/oragerc as
+    well.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Fri, 13 Feb 2009 20:04:02 +0100
+
+xubuntu-default-settings (0.50) jaunty; urgency=low
+
+  * usr/share/applications/xubuntu-help.desktop: moved from xfdesktop4, menu
+    item to open Xubuntu documentation files (LP: #239904).
+  * etc/xdg/xubuntu/menus/xfce-applications.menu: include it instead of
+    xfce4-help.desktop.
+  * etc/xdg/xubuntu/gdm/gdm.conf: change default session from xfce4.desktop to
+    xfce.desktop (renamed in xfce4-utils 4.5.x).
+  * etc/xdg/xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml: added to
+    enable GNOME acessibility services, and disable splash screen  by default.
+  * etc/xdg/xubuntu/xfce4/panel/*: updated for Xfce 4.6.
+  * etc/xdg/xubuntu/menus/xfce-applications.menu: use "DesktopSettings" category
+    instead of "Settings" inside xfce4-settings' menu to avoid duplication.
+  * debian/control: drop the dependency on xfce4-utils, it doesn't work.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 08 Feb 2009 18:44:56 +0100
+
+xubuntu-default-settings (0.49) jaunty; urgency=low
+
+  * etc/xdg/xubuntu/:
+    - menus/xfce-applications.menu: provides a xubuntu-specific desktop menu:
+      + add gnome-app-install-xfce as a direct child of "Applications", and hide
+        it from the System submenu (LP: #214809)
+    - xfce4/panel/xfce4-menu-1.rc: open this menu file by default
+    - xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml: add some
+      key bindings for Xfce4-screenshooter (LP: #319735).
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 07 Feb 2009 17:51:23 +0100
+
+xubuntu-default-settings (0.48) jaunty; urgency=low
+
+  * Do not ship usr/share/themes/Xfwm4.5-svn anymore, it's now the default theme
+    with Xfce 4.6.
+  * debian/control:
+    - update Homepage and Vcs-* urls
+    - depends on xfce4-utils (>= 4.5.99.1-0ubuntu2) to correctly handle
+      XDG_{CONFIG,DATA}_DIRS.
+  * Move etc/xdg/xfce4 to etc/xdg/xubuntu.
+  * Migrate all config files to xfconf.
+  * debian/postinst: handle config files' removal.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 07 Feb 2009 15:21:16 +0100
+
+xubuntu-default-settings (0.47) intrepid; urgency=low
+
+  * usr/share/xfce4/backgroups/*:
+    - Set non-widescreen background as default and name widescreen
+      background xubuntu-jmak-ws.png
+  * Added etc/xdg/xfce4/mcs_settings/wmtweaks.xml:
+     - Disable changing workspace via mousewheel on background by default.
+     - Fixes LP: #226888
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Tue, 14 Oct 2008 10:17:27 -0300
+
+xubuntu-default-settings (0.46) intrepid; urgency=low
+
+  * Removed default orage settings.
+  * Updated /etc/xdg/Thunar/volmanrc:
+    - Launch listen instead of totem for music cds.
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Thu, 02 Oct 2008 05:39:54 -0300
+
+xubuntu-default-settings (0.45) intrepid; urgency=low
+
+  * etc/xdg/orage/oragerc:
+    - Added new default options for orage so that it'll  use the
+      static icon in the system tray instead of the ugly dynamic ones.
+  * etc/xdg/xubuntu/applications/defaults.list:
+    - Use gpicview instead of ristretto.
+  * usr/share/xfce4/backdrops/*:
+    - Moved current wallpaper to xubuntu-jmak-hardy.png.
+    - Added new wallpaper for Intrepid.
+    - Added new wallpaper for Intrepid for widescreen monitors.
+  * etc/xdg/xfce4/mcs_settings/gtk.xml:
+    - Enable anti-aliasing and hinting by default.
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Mon, 29 Sep 2008 09:20:44 -0300
+
+xubuntu-default-settings (0.44) intrepid; urgency=low
+
+  * debian/control:
+    - Provide gdm-theme after discussion regarding lp #258091
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Fri, 15 Aug 2008 14:51:06 -0300
+
+xubuntu-default-settings (0.43) intrepid; urgency=low
+
+  * etc/xdg/xfce4/panel/places-2.xml:
+    - Set catfish as search command.
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Wed, 16 Jul 2008 23:26:19 -0300
+
+xubuntu-default-settings (0.42) intrepid; urgency=low
+
+  * Updated GDM theme for Intrepid.
+  * Added xfce4-mixer to default panel configuration. (lp: #220948)
+  * debian/change:
+    - Bumped standards version to 3.8.0.
+    - Updated long description.
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Mon, 14 Jul 2008 19:29:21 -0300
+
+xubuntu-default-settings (0.41) intrepid; urgency=low
+
+  * etc/xdg/xubuntu/applications/default.list:
+    - Updated to use ristretto to view images instead of gqview.
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Sun, 15 Jun 2008 09:14:43 -0300
+
+xubuntu-default-settings (0.40) intrepid; urgency=low
+
+  * etc/xdg/xubuntu/gdm/gdm.conf:
+    - Updated to use xfce4.desktop session instead of default.desktop
+      which should fix a number of bugs caused by Xubuntu not properly
+      starting.
+    - Closes lp: #220899
+    - Closes lp: #224444
+    - Closes lp: #200665
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Sun, 15 Jun 2008 06:12:35 -0300
+
+xubuntu-default-settings (0.39) hardy; urgency=low
+
+  * Changed panel colours back to theme default.
+  * Set default number of workspaces to 2 instead of 4.
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Thu, 10 Apr 2008 01:21:16 -0300
+
+xubuntu-default-settings (0.38) hardy; urgency=low
+
+  * Fixed GDM theme (Closes LP: #208901)
+  * Disable border on system tray.
+  * Disable flat buttons on task list.
+  * Updated changelog to include date in copyright.
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Tue, 01 Apr 2008 12:37:27 -0300
+
+xubuntu-default-settings (0.37) hardy; urgency=low
+
+  * Updated gdm theme
+  * Updated MurinaDarkCloud gtkrc
+  * New backround image
+  * Fixed path to icon in firefox panel launcher
+
+ -- Cody A.W. Somerville <cody-somerville@ubuntu.com>  Tue, 26 Feb 2008 19:09:49 -0400
+
+xubuntu-default-settings (0.36) hardy; urgency=low
+
+  [Cody A.W. Somerville]
+
+  * Modified panel sizes (smaller panels).    (LP: #106233)
+  * debian/control: Added homepage field
+
+  [Lionel Le Folgoc]
+
+  * debian/control:
+    - add the Vcs-Bzr & Vcs-Browser fields since this package is maintained
+      in bzr
+    - change maintainer to "Xubuntu Developers"
+    - bump Standards-Version to 3.7.3.
+  * etc/xdg/xfce4/panel/panels.xml: re-enable the places plugin.
+  * etc/xdg/xfce4/panel/places-2.rc: updated.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 15 Dec 2007 18:35:57 +0100
+
+xubuntu-default-settings (0.35) gutsy; urgency=low
+
+  * Remove places plugin from the panel, it crashes on accessing volumes
+  * Point help browser to the Xubuntu docs not the ubuntu-artwork link
+    which depends on what is set in the alternatives system
+
+ -- Jani Monoses <jani@ubuntu.com>  Sat, 13 Oct 2007 22:39:27 +0200
+
+xubuntu-default-settings (0.34) gutsy; urgency=low
+
+  * resync with latest gdm.conf, change background to blueish
+  * use locale neutral URL in help launcher
+
+ -- Jani Monoses <jani@ubuntu.com>  Thu, 04 Oct 2007 22:52:43 +0200
+
+xubuntu-default-settings (0.33) gutsy; urgency=low
+
+  * etc/xdg/xubuntu/applications/defaults.list, etc/xdg/Thunar/thunarrc:
+    default to totem instead of gxine, brasero instead of xfburn
+
+ -- Jani Monoses <jani@ubuntu.com>  Fri, 28 Sep 2007 22:37:28 +0200
+
+xubuntu-default-settings (0.32) gutsy; urgency=low
+
+  * etc/xdg/xubuntu/applications/defaults.list: default to gxine and
+    file-roller instead of xfmedia and xarchiver
+
+ -- Jani Monoses <jani@ubuntu.com>  Sun,  9 Sep 2007 20:01:29 +0200
+
+xubuntu-default-settings (0.31) gutsy; urgency=low
+
+  * etc/xdg/xfce4/panel: add a launcher for the xubuntu desktop guide.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 08 Sep 2007 22:09:28 +0200
+
+xubuntu-default-settings (0.30) gutsy; urgency=low
+
+  * etc/xdg/xubuntu/gdm/gdm.conf:
+    - set the GtkTheme to MurrinaStormCloud
+    - use "Browser=true" so the users lists work correctly.	(LP: #137975)
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Fri, 07 Sep 2007 16:24:03 +0200
+
+xubuntu-default-settings (0.29) gutsy; urgency=low
+
+  * Update gdm theme and wallpaper.
+  * usr/share/themes/Xfwm4.5-svn: new xfwm4 default theme.
+  * debian/copyright: updated.
+  * etc/xdg/xfce4/mcs_settings/xfwm4.xml: added to set the default xfwm4 theme.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Wed, 15 Aug 2007 15:43:20 +0200
+
+xubuntu-default-settings (0.28) gutsy; urgency=low
+
+  * usr/share/themes/MurrinaStormCloud: ship the new default theme.
+  * debian/copyright: updated.
+  * etc/xdg/xfce4/mcs_settings/gtk.xml: set default theme to MurrinaStormCloud.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 04 Aug 2007 11:56:07 +0200
+
+xubuntu-default-settings (0.27) gutsy; urgency=low
+
+  * etc/xdg/xfce4/panel/launcher-3.rc: drop the thunar launcher.
+  * etc/xdg/xfce4/panel/places-2.rc: add the xfce4-places-plugin to the panel.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 07 Jul 2007 00:46:21 +0200
+
+xubuntu-default-settings (0.26) feisty; urgency=low
+
+  * Enable thunar volume manager by default
+  * Make gxine the default audio CD and DVD player for newly inserted discs
+  * Fix thunar launcher description  
+
+ -- Jani Monoses <jani@ubuntu.com>  Wed, 21 Mar 2007 12:30:35 +0200
+
+xubuntu-default-settings (0.25) feisty; urgency=low
+
+  * Add a thunar launcher to the panel
+  * Update gdm theme and wallpaper
+  * Add a default thunar-volman config
+
+ -- Gauvain Pocentek <gauvainpocentek@ubuntu.com>  Sun, 28 Jan 2007 07:37:42 +0100
+
+xubuntu-default-settings (0.24) feisty; urgency=low
+
+  * Add etc/xdg/xfce4/desktop/xfdesktoprc: only show the 
+    removable devices icons on the desktop.
+
+ -- Gauvain Pocentek <gauvainpocentek@ubuntu.com>  Sat, 23 Dec 2006 10:52:56 +0100
+
+xubuntu-default-settings (0.23) edgy; urgency=low
+
+  * etc/xdg/xfce4/mcs_settings/desktop.xml: Do not show system menu by default
+    on right click. Enable latest edgy wallpaper
+  * etc/xdg/xfce4/panel/tasklist-2.rc: Do not make buttons flat in taskbar,
+    keep it how it was in dapper. 
+
+ -- Jani Monoses <jani@ubuntu.com>  Mon, 23 Oct 2006 13:22:49 +0300
+
+xubuntu-default-settings (0.22) edgy; urgency=low
+
+  * Add trashcan to bottom panel
+  * Install config files ready to use in accessibility enabled setups.
+
+ -- Jani Monoses <jani@ubuntu.com>  Mon, 16 Oct 2006 09:53:59 +0300
+
+xubuntu-default-settings (0.21) edgy; urgency=low
+
+  * Xubuntu.xml gdm configuration: add a pam-message stanza so the
+    user is warned when his password will expire.
+
+ -- Gauvain Pocentek <gauvainpocentek@ubuntu.com>  Thu, 12 Oct 2006 19:19:39 +0200
+
+xubuntu-default-settings (0.20) edgy; urgency=low
+
+  * Update gdm theme with new backgroung.png, text.png and
+    Xubuntu.xml files
+
+ -- Gauvain Pocentek <gauvainpocentek@ubuntu.com>  Sun,  1 Oct 2006 19:05:49 +0200
+
+xubuntu-default-settings (0.19) edgy; urgency=low
+
+  * Update gdm theme using the new Jozsef Mak one
+  * Add xubuntu-jmak.png backdrop
+  * Bump Standards Version to 3.7.2
+  * Bump debhelper compat to 5
+
+ -- Gauvain Pocentek <gauvainpocentek@ubuntu.com>  Mon, 28 Aug 2006 17:19:37 +0200
+
+xubuntu-default-settings (0.18) dapper; urgency=low
+
+  * Make timed login text white (thus visible) in the gdm theme
+  * Add the same Human icons for shutdown/reboot/logout in the gdm
+    screen that are used in the Xfce session logout dialog
+
+ -- Jani Monoses <jani@ubuntu.com>  Tue, 30 May 2006 15:09:41 +0300
+
+xubuntu-default-settings (0.17) dapper; urgency=low
+
+  * Make Human the default xcursor theme
+
+ -- Jani Monoses <jani@ubuntu.com>  Wed, 24 May 2006 17:21:05 +0300
+
+xubuntu-default-settings (0.16) dapper; urgency=low
+
+  * Make the default gdm session xfce4.desktop to make sure
+    not only xfce4-session is started but startxfce4, which
+    means xscreensaver is started too (LP #42887)
+
+ -- Jani Monoses <jani@ubuntu.com>  Tue, 16 May 2006 18:57:25 +0300
+
+xubuntu-default-settings (0.15) dapper; urgency=low
+
+  * Add /etc/xdg/xubuntu/applications/defaults.list to set
+    default mime handlers  (gqview, gnumeric, xfmedia, etc.)
+  * Add another wallpaper by Luzi
+
+ -- Jani Monoses <jani@ubuntu.com>  Mon, 15 May 2006 20:36:12 +0300
+
+xubuntu-default-settings (0.14) dapper; urgency=low
+
+  * Make Clearlooks the default theme 
+
+ -- Jani Monoses <jani@ubuntu.com>  Mon,  1 May 2006 12:25:53 +0300
+
+xubuntu-default-settings (0.13) dapper; urgency=low
+
+  * gdm theme colour tweaks, thumbnail and credits 
+
+ -- Jani Monoses <jani@ubuntu.com>  Sat, 29 Apr 2006 11:28:44 +0300
+
+xubuntu-default-settings (0.12) dapper; urgency=low
+
+  * New gdm theme from Jozsef Mak 
+
+ -- Jani Monoses <jani@ubuntu.com>  Fri, 28 Apr 2006 08:10:22 +0300
+
+xubuntu-default-settings (0.11) dapper; urgency=low
+
+  * Add xubuntu logo in the desktop menu button
+  * Do not fail in postinst if /etc/gdm does not exist (LP #40110)
+
+ -- Jani Monoses <jani@ubuntu.com>  Tue, 25 Apr 2006 21:36:59 +0300
+
+xubuntu-default-settings (0.10) dapper; urgency=low
+
+  * Switch back to alternatives scheme for gdm.conf to be able to
+    install along edubuntu (  revert most of the last upload )
+  * Use hyphen not underscore in wallpaper name
+
+ -- Jani Monoses <jani@ubuntu.com>  Mon, 24 Apr 2006 16:36:15 +0300
+
+xubuntu-default-settings (0.9) dapper; urgency=low
+
+  * Add a new wallpaper by Jozsef Mak
+  * Install gdm-cdd.conf directly not via alternatives, and
+    add Provides: and Conflicts: on gdm-config-derivative
+
+ -- Jani Monoses <jani@ubuntu.com>  Mon, 24 Apr 2006 00:29:22 +0300
+
+xubuntu-default-settings (0.8) dapper; urgency=low
+
+  * Add default panel settings files here, instead of patching xfce4-panel
+  * Remove ivman configuration
+
+ -- Jani Monoses <jani@ubuntu.com>  Fri, 21 Apr 2006 18:47:56 +0300
+
+xubuntu-default-settings (0.7) dapper; urgency=low
+
+  * Default xfprint backend to CUPS instead of None, so print dialog
+    launched from desktop menu works
+
+ -- Jani Monoses <jani@ubuntu.com>  Wed, 19 Apr 2006 13:10:54 +0300
+
+xubuntu-default-settings (0.6) dapper; urgency=low
+
+  * Add default config file for the UI settings and set tango as the 
+    icon theme 
+
+ -- Jani Monoses <jani@ubuntu.com>  Wed, 19 Apr 2006 10:08:46 +0300
+
+xubuntu-default-settings (0.5) dapper; urgency=low
+
+  * Change gdm root window color from brown to the same as the background
+    of the Xfce splash to avoid too many color changes during startup
+  * Add default config file for xfdesktop and set it to use desktop icons 
+    by default (friendlier than upstream default of not using them, and needed
+    for the espresso launcher icon anyway)
+
+ -- Jani Monoses <jani@ubuntu.com>  Tue, 18 Apr 2006 22:20:21 +0300
+
+xubuntu-default-settings (0.4) dapper; urgency=low
+
+  * Fix gdm theme name, take two. 
+
+ -- Jani Monoses <jani@ubuntu.com>  Sat, 18 Feb 2006 10:28:34 +0200
+
+xubuntu-default-settings (0.3) dapper; urgency=low
+
+  * Fix gdm theme name
+  * Add alternative providing /etc/gdm/gdm-cdd.conf which has precedence over
+    the default gdm.conf. Use it for selecting custom gdm theme
+
+ -- Jani Monoses <jani@ubuntu.com>  Fri, 17 Feb 2006 12:28:30 +0200
+
+xubuntu-default-settings (0.2) dapper; urgency=low
+
+  * Make this a native package
+
+ -- Jani Monoses <jani@ubuntu.com>  Sun, 18 Dec 2005 22:18:54 +0200
+
+xubuntu-default-settings (0.1) dapper; urgency=low
+
+  * Initial release with custom ivman configuration files and
+    a GDM theme
+
+ -- Jani Monoses <jani@ubuntu.com>  Fri,  9 Dec 2005 16:21:22 +0200
+

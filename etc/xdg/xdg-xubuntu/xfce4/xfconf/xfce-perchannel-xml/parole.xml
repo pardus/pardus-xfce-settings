@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="parole" version="1.0">
+  <property name="video" type="empty">
+    <property name="videosink" type="string" value="xvimagesink"/>
+  </property>
+  <property name="parole" type="empty">
+    <property name="plugins" type="string" value="parole-mpris2.so"/>
+  </property>
+</channel>

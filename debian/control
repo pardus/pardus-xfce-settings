@@ -1,0 +1,27 @@
+Source: xubuntu-default-settings
+Section: x11
+Priority: optional
+Maintainer: Xubuntu Developers <xubuntu-devel@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), intltool
+Standards-Version: 3.9.6
+Homepage: https://launchpad.net/xubuntu-default-settings
+Vcs-Bzr: lp:xubuntu-default-settings
+Vcs-Browser: http://bazaar.launchpad.net/~xubuntu-dev/xubuntu-default-settings/trunk/files
+
+Package: xubuntu-default-settings
+Architecture: all
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, xubuntu-artwork (>= 12.10.1~), fonts-noto-hinted,
+ x11-common (>= 1:7.6+7ubuntu2), lightdm-gtk-greeter (>= 2.0.1-1),
+ xfce4-session (>= 4.12.1-3ubuntu2~)
+Recommends: libxfce4ui-utils
+Breaks: upstart (<< 1.13.2-0ubuntu28~)
+Provides: lightdm-gtk-greeter-config
+Description: default settings for the Xubuntu desktop
+ This package contains the default settings used by Xubuntu.
+
+Package: xubuntu-live-settings
+Architecture: all
+Depends: ${misc:Depends}, casper, xubuntu-default-settings
+Description: configuration for the Xubuntu live cd
+ This package contains live cd customizations used by Xubuntu.
