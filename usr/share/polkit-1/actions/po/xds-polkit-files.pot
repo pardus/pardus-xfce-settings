@@ -17,6 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../com.ubuntu.pkexec.mousepad.policy.in.h:1
+#: ../tr.pardus.org.pkexec.mousepad.policy.in.h:1
 msgid "Authentication is required to run mousepad as root"
 msgstr ""

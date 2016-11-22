@@ -4,10 +4,10 @@
  "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 <policyconfig>
 
-  <vendor>Xubuntu Developers</vendor>
-  <vendor_url>http://www.xubuntu.org/</vendor_url>
+  <vendor>Pardus Developers</vendor>
+  <vendor_url>http://www.pardus.org.tr/</vendor_url>
 
-  <action id="com.ubuntu.pkexec.mousepad">
+  <action id="tr.org.pardus.pkexec.mousepad">
     <_message>Authentication is required to run mousepad as root</_message>
     <icon_name>mousepad</icon_name>
     <defaults>
