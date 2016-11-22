@@ -1,5 +1,5 @@
-# Set default environment vars in Xubuntu
-if [ "$DESKTOP_SESSION" = xubuntu ]; then
+# Set default environment vars in Pardus
+if [ "$DESKTOP_SESSION" = pardus ]; then
     # Disable GTK 3.16 overlay scrollbars
     export GTK_OVERLAY_SCROLLING=0
     # QT5 apps to use GTK style
