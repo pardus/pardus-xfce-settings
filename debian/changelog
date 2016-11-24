@@ -1,3 +1,12 @@
+pardus-xfce-default-settings (2016.2) pardus; urgency=medium
+
+  * Update Makefile
+  * Update usr directory and delete unneccessary files for pardus
+  * Modify files under etc directory for Pardus configuration The XDG_CURRENT_DESKTOP variable needed to identify the current desktop environment in order to change specific configurations for Pardus XFCE.
+  * Rename xubuntu related files and change the content
+
+ -- Yusuf Düzgün <yusuf.duzgun@pardus.org.tr>  Thu, 24 Nov 2016 15:59:49 +0300
+
 pardus-xfce-default-settings (2016.1) pardus; urgency=medium
 
   * Rename from xubuntu to pardus
