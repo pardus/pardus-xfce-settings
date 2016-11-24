@@ -1,5 +1,5 @@
 # Set default environment vars in Pardus
-if [ "$XDG_CURRENT_DESKTOP" = XFCE ]; then
+if [ "$DESKTOP_SESSION" = lightdm-xsession ] || [ "$XDG_CURRENT_DESKTOP" = XFCE ]; then
 	# Set default path to xdg-pardus-xfce	
 	export XDG_CONFIG_DIRS=/etc/xdg/xdg-pardus-xfce:/etc/xdg
     # Disable GTK 3.16 overlay scrollbars
