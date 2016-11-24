@@ -3,18 +3,11 @@ late-locking=false
 lock-after-screensaver=0
 lock-on-suspend=true
 
-[com.canonical.indicator.sound]
-interested-media-players=[ 'parole' ]
-
-[org.gnome.desktop.background]
-picture-uri='file:///usr/share/xfce4/backdrops/xubuntu-wallpaper.png'
-
 [org.gnome.desktop.interface]
 gtk-theme='Greybird'
-icon-theme='elementary-xfce-darker'
+icon-theme='pardus-xfce-icon-theme-dark'
 
 [org.xfce.mousepad.preferences.view]
-color-scheme='xubuntu_light'
 font-name='DejaVu Sans Mono 10'
 use-default-monospace-font=false
 
