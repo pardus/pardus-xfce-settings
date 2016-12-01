@@ -1,3 +1,12 @@
+pardus-xfce-settings (2016.4) pardus; urgency=medium
+
+  * Update changelog for 2016.3 release
+  * rename package
+  * disable setting xdg-config-dirs
+  * rename xdg-pardus-xfce to pardus
+
+ -- Yusuf Düzgün <yusuf.duzgun@pardus.org.tr>  Thu, 01 Dec 2016 15:05:43 +0300
+
 pardus-xfce-settings (2016.3) pardus; urgency=medium
 
   [ Yusuf Düzgün ]
