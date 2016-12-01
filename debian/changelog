@@ -1,4 +1,4 @@
-pardus-xfce-default-settings (2016.3) pardus; urgency=medium
+pardus-xfce-settings (2016.3) pardus; urgency=medium
 
   [ Yusuf Düzgün ]
   * Add or statement for lightdm's default session
@@ -8,7 +8,7 @@ pardus-xfce-default-settings (2016.3) pardus; urgency=medium
 
  -- karbo <karbo@evo>  Wed, 30 Nov 2016 11:46:17 +0300
 
-pardus-xfce-default-settings (2016.2) pardus; urgency=medium
+pardus-xfce-settings (2016.2) pardus; urgency=medium
 
   * Update Makefile
   * Update usr directory and delete unneccessary files for pardus
@@ -17,7 +17,7 @@ pardus-xfce-default-settings (2016.2) pardus; urgency=medium
 
  -- Yusuf Düzgün <yusuf.duzgun@pardus.org.tr>  Thu, 24 Nov 2016 15:59:49 +0300
 
-pardus-xfce-default-settings (2016.1) pardus; urgency=medium
+pardus-xfce-settings (2016.1) pardus; urgency=medium
 
   * Rename from xubuntu to pardus
 

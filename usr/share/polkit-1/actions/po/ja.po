@@ -1,11 +1,11 @@
-# Japanese translation for pardus-xfce-default-settings
+# Japanese translation for pardus-xfce-settings
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
-# This file is distributed under the same license as the pardus-xfce-default-settings package.
+# This file is distributed under the same license as the pardus-xfce-settings package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pardus-xfce-default-settings\n"
+"Project-Id-Version: pardus-xfce-settings\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-09 22:36-0500\n"
 "PO-Revision-Date: 2014-09-15 03:29+0000\n"

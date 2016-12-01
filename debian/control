@@ -1,4 +1,4 @@
-Source: pardus-xfce-default-settings
+Source: pardus-xfce-settings
 Section: xfce
 Priority: optional
 Maintainer: Cihangir Akturk <cihangir@pardus.org.tr>,
@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 9), intltool
 Standards-Version: 3.9.8
 Homepage: http://pardus.org.tr
 
-Package: pardus-xfce-default-settings
+Package: pardus-xfce-settings
 Architecture: all
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, pardus-xfce-icon-theme, greybird-gtk-theme,
@@ -20,6 +20,6 @@ Description: default settings for the Pardus desktop
 
 Package: pardus-xfce-live-settings
 Architecture: all
-Depends: ${misc:Depends}, pardus-xfce-default-settings
+Depends: ${misc:Depends}, pardus-xfce-settings
 Description: configuration for the Paruds live cd
  This package contains live cd customizations used by Pardus.
