@@ -1,7 +1,0 @@
-rm_conffile /etc/xdg/xdg-pardus-xfce/xfce4/panel/indicator-5.rc
-rm_conffile /etc/xdg/xdg-pardus-xfce/xfce4/panel/datetime-7.rc
-mv_conffile /etc/xdg/xdg-pardus-xfce/Terminal/terminalrc /etc/xdg/xdg-pardus-xfce/xfce4/terminal/terminalrc
-rm_conffile /etc/xdg/xdg-pardus-xfce/Thunar/thunarrc
-rm_conffile /etc/xdg/xdg-pardus-xfce/autostart/light-locker.desktop
-rm_conffile /etc/xdg/xdg-pardus-xfce/lightdm/lightdm-gtk-greeter.conf
-rm_conffile /etc/lightdm/lightdm-gtk-greeter.conf.d/30_pardus.conf
