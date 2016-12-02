@@ -1,3 +1,9 @@
+pardus-xfce-settings (2016.5) pardus; urgency=medium
+
+  * fix names
+
+ -- Yusuf Düzgün <yusuf.duzgun@pardus.org.tr>  Fri, 02 Dec 2016 09:53:57 +0300
+
 pardus-xfce-settings (2016.4) pardus; urgency=medium
 
   * Update changelog for 2016.3 release
