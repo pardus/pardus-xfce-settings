@@ -1,3 +1,16 @@
+pardus-xfce-settings (2016.6) pardus; urgency=medium
+
+  [ Yekta Leblebici ]
+  * modified shortcuts, removed broken ones
+  * workspaces set to 1, wspace scrolling disabled
+
+  [ Yusuf Düzgün ]
+  * rename 56pardus-setxdg to 56pardus-xfce-setenv
+  * add debian/preinst
+  * add showdesktop button on the panel
+
+ -- Yusuf Düzgün <yusuf.duzgun@pardus.org.tr>  Mon, 05 Dec 2016 15:00:14 +0300
+
 pardus-xfce-settings (2016.5) pardus; urgency=medium
 
   * fix names
