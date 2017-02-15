@@ -1,3 +1,10 @@
+pardus-xfce-settings (2016.7) pardus; urgency=medium
+
+  [ Yekta Leblebici ]
+  * default mail reader is now Icedove.
+
+ -- Yekta Leblebici <yekta.leblebici@pardus.org.tr>  Wed, 15 Feb 2017 14:15:11 +0300
+
 pardus-xfce-settings (2016.6) pardus; urgency=medium
 
   [ Yekta Leblebici ]
