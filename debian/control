@@ -9,7 +9,8 @@ Homepage: http://pardus.org.tr
 Package: pardus-xfce-settings
 Architecture: all
 Pre-Depends: ${misc:Pre-Depends}, pardus-x11-settings
-Depends: ${misc:Depends}, pardus-xfce-icon-theme, greybird-gtk-theme,
+Depends: ${misc:Depends}, 
+ pardus-xfce-icon-theme, greybird-gtk-theme, zukitre-theme,
  x11-common (>= 1:7.7+16), lightdm-gtk-greeter (>= 1.2.1-1),
  xfce4-session (>= 4.12.1-4)
 Recommends: libxfce4ui-utils

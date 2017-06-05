@@ -1,5 +1,0 @@
-#!/bin/sh
-
-if [ -f /etc/X11/Xsession.d/56pardus-setxdg ]; then
-    rm -f /etc/X11/Xsession.d/56pardus-setxdg
-fi
