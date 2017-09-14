@@ -15,8 +15,7 @@
         <value type="int" value="7"/>
         <value type="int" value="13"/>
         <value type="int" value="5"/>
-        <value type="int" value="1"/>
-        <value type="int" value="6"/>
+        <value type="int" value="1"/>        
         <value type="int" value="8"/>
         <value type="int" value="4"/>
       </property>
@@ -29,6 +28,8 @@
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="thunar"/>
       </property>
+      <property name="show-frame" type="bool" value="false"/>
+      <property name="size-max" type="uint" value="26"/>
     </property>
     <property name="plugin-3" type="string" value="tasklist"/>
     <property name="plugin-4" type="string" value="actions">
@@ -56,8 +57,7 @@
     <property name="plugin-5" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
     </property>
-    <property name="plugin-2" type="string" value="whiskermenu"/>
-    <property name="plugin-6" type="string" value="power-manager-plugin"/>
+    <property name="plugin-2" type="string" value="whiskermenu"/>    
     <property name="plugin-13" type="string" value="showdesktop"/>
   </property>
 </channel>
