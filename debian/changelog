@@ -1,3 +1,9 @@
+pardus-xfce-settings (2017.8) onyedi; urgency=medium
+
+  * Update default panel on live session and whisker menu icon size
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Tue, 10 Oct 2017 16:03:18 +0300
+
 pardus-xfce-settings (2017.7) onyedi; urgency=medium
 
   * Update default terminal colors and system-tray power manager icon
