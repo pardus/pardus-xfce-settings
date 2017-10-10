@@ -6,7 +6,7 @@ show-button-icon=true
 load-hierarchy=true
 launcher-show-name=true
 launcher-show-description=false
-item-icon-size=1
+item-icon-size=2
 category-icon-size=0
 hover-switch-category=false
 favorites-in-recent=true
@@ -32,7 +32,7 @@ regex=false
 [action1]
 name=Wikipedia
 pattern=!w
-command=exo-open --launch WebBrowser http://en.wikipedia.org/wiki/%u
+command=exo-open --launch WebBrowser https://en.wikipedia.org/wiki/%u
 regex=false
 
 [action2]
