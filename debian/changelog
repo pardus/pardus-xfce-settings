@@ -1,3 +1,9 @@
+pardus-xfce-settings (2017.9) onyedi; urgency=medium
+
+  * Add X11 conf file to enable gestures on toucpad via libinput
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Fri, 27 Oct 2017 16:46:49 +0300
+
 pardus-xfce-settings (2017.8) onyedi; urgency=medium
 
   * Update default panel on live session and whisker menu icon size
