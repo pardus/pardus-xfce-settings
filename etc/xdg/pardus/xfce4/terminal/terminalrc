@@ -1,9 +1,10 @@
 [Configuration]
 FontName=DejaVu Sans Mono 9
 MiscCursorBlinks=TRUE
-MiscCursorShape=TERMINAL_CURSOR_SHAPE_IBEAM
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 ColorBackground=#1c1c1c1c1c1c
 ColorCursor=#ffffcbcb0808
+ColorCursorUseDefault=FALSE
 ColorBoldUseDefault=FALSE
 ColorBold=#e9e9b9b96e6e
 ColorForeground=#eeeeeeeeecec
