@@ -1,3 +1,14 @@
+pardus-xfce-settings (2018.1) onyedi; urgency=medium
+
+  [ Cihangir Akturk ]
+  * ci: change artifact location to /packages
+
+  [ Yunusemre Şentürk ]
+  * Update terminal settings
+  * Bump package version
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Mon, 02 Jul 2018 17:11:42 +0300
+
 pardus-xfce-settings (2017.9) onyedi; urgency=medium
 
   * Add X11 conf file to enable gestures on toucpad via libinput
