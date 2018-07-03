@@ -1,4 +1,4 @@
-favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,libreoffice-writer.desktop,libreoffice-calc.desktop,pidgin.desktop,org.gnome.Software.desktop,exo-terminal-emulator.desktop,xfhelp4.desktop,debian-installer-launcher.desktop
+favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,libreoffice-writer.desktop,libreoffice-calc.desktop,pidgin.desktop,org.gnome.Software.desktop,exo-terminal-emulator.desktop,pardus-store.desktop,debian-installer-launcher.desktop
 button-title=Applications Menu
 button-icon=emblem-pardus
 show-button-title=false
