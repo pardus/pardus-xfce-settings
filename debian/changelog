@@ -1,3 +1,9 @@
+pardus-xfce-settings (2018.2) onyedi; urgency=medium
+
+  * Add pardus-store to favorites
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Tue, 03 Jul 2018 10:05:30 +0300
+
 pardus-xfce-settings (2018.1) onyedi; urgency=medium
 
   [ Cihangir Akturk ]
