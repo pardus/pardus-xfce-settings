@@ -11,7 +11,7 @@ Architecture: all
 Pre-Depends: ${misc:Pre-Depends}, pardus-x11-settings
 Depends: ${misc:Depends},
  arc-theme,
- libreoffice-style-sifr,
+ libreoffice-style-colibre,
  lightdm-gtk-greeter (>= 1.2.1-1), 
  pardus-xfce-icon-theme,
  x11-common (>= 1:7.7+16),
