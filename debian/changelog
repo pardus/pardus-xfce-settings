@@ -1,3 +1,9 @@
+pardus-xfce-settings (2018.5) unstable; urgency=medium
+
+  * Make thunar menubar visible by default
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Wed, 05 Dec 2018 12:05:17 +0300
+
 pardus-xfce-settings (2018.4) unstable; urgency=medium
 
   * Use pardus-icon-theme instead pardus-xfce-icon-theme
