@@ -5,7 +5,7 @@ lock-on-suspend=true
 
 [org.gnome.desktop.interface]
 gtk-theme='Arc-Darker'
-icon-theme='pardus-xfce-icon-theme-dark'
+icon-theme='pardus'
 
 [org.xfce.mousepad.preferences.view]
 font-name='DejaVu Sans Mono 10'
