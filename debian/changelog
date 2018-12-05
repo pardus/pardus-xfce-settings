@@ -1,3 +1,9 @@
+pardus-xfce-settings (2018.4) unstable; urgency=medium
+
+  * Use pardus-icon-theme instead pardus-xfce-icon-theme
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Wed, 05 Dec 2018 10:11:28 +0300
+
 pardus-xfce-settings (2018.3) onyedi; urgency=medium
 
   * Change libreoffice default symbol set from sifr to colibre
