@@ -10,12 +10,11 @@ Package: pardus-xfce-settings
 Architecture: all
 Pre-Depends: ${misc:Pre-Depends}, pardus-x11-settings
 Depends: ${misc:Depends},
- arc-theme,
- libreoffice-style-colibre,
- lightdm-gtk-greeter (>= 1.2.1-1), 
- pardus-icon-theme,
- x11-common (>= 1:7.7+16),
- xfce4-session (>= 4.12.1-4),
+ elementary-xfce-icon-theme,
+ lightdm-gtk-greeter, 
+ adwaita-icon-theme,
+ x11-common,
+ xfce4-session,
  xfconf
 Recommends: libxfce4ui-utils
 Provides: lightdm-gtk-greeter-config
