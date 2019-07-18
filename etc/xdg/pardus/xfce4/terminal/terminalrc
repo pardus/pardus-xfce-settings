@@ -1,5 +1,5 @@
 [Configuration]
-FontName=DejaVu Sans Mono 9
+FontName=DejaVu Sans Mono 12
 MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 ColorBackground=#1c1c1c1c1c1c

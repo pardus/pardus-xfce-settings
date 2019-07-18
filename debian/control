@@ -10,9 +10,9 @@ Package: pardus-xfce-settings
 Architecture: all
 Pre-Depends: ${misc:Pre-Depends}, pardus-x11-settings
 Depends: ${misc:Depends},
- elementary-xfce-icon-theme,
+ papirus-icon-theme,
  lightdm-gtk-greeter, 
- adwaita-icon-theme,
+ adapta-gtk-theme-colorpack,
  x11-common,
  xfce4-session,
  xfconf

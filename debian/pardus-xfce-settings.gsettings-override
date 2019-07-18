@@ -4,8 +4,8 @@ lock-after-screensaver=0
 lock-on-suspend=true
 
 [org.gnome.desktop.interface]
-gtk-theme='Arc-Darker'
-icon-theme='pardus'
+gtk-theme='Adapta-Blue'
+icon-theme='Papirus'
 
 [org.xfce.mousepad.preferences.view]
 font-name='DejaVu Sans Mono 10'
