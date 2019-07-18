@@ -4,7 +4,7 @@ lock-after-screensaver=0
 lock-on-suspend=true
 
 [org.gnome.desktop.interface]
-gtk-theme='Adapta-Blue'
+gtk-theme='Greybird'
 icon-theme='Papirus'
 
 [org.xfce.mousepad.preferences.view]

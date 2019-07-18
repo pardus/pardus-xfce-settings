@@ -12,7 +12,7 @@ Pre-Depends: ${misc:Pre-Depends}, pardus-x11-settings
 Depends: ${misc:Depends},
  papirus-icon-theme,
  lightdm-gtk-greeter, 
- adapta-gtk-theme-colorpack,
+ greybird-gtk-theme,
  x11-common,
  xfce4-session,
  xfconf
