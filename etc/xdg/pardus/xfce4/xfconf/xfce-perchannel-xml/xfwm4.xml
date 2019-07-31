@@ -4,7 +4,7 @@
   <property name="general" type="empty">
     <property name="workspace_count" type="int" value="1"/>
     <property name="scroll_workspaces" type="bool" value="false"/>
-    <property name="theme" type="string" value="Arc-Darker"/>
+    <property name="theme" type="string" value="Adapta-Blue"/>
     <property name="button_layout" type="string" value="O|HMC"/>
   </property>
 </channel>
