@@ -1,3 +1,16 @@
+pardus-xfce-settings (2019.10) ondokuz; urgency=medium
+
+  [ Yusuf Düzgün ]
+  * changed pardus theme
+  * changed pardus default theme
+
+  [ Fatih Altun ]
+  * Change pardus default theme to adapta-blue-eta with pardus-icons
+  * Change default window theme to adapta-blue
+  * Update show menu icons to true
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Wed, 31 Jul 2019 17:02:41 +0000
+
 pardus-xfce-settings (2019.9) ondokuz; urgency=medium
 
   [ Yusuf Düzgün ]
