@@ -1,3 +1,9 @@
+pardus-xfce-settings (2019.11) ondokuz; urgency=medium
+
+  * Change default mail application to thunderbird
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Sat, 03 Aug 2019 12:05:21 +0300
+
 pardus-xfce-settings (2019.10) ondokuz; urgency=medium
 
   [ Yusuf Düzgün ]
