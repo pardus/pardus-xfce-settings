@@ -10,3 +10,4 @@ ColorBold=#e9e9b9b96e6e
 ColorForeground=#eeeeeeeeecec
 ColorPalette=rgb(0,0,0);rgb(170,0,0);rgb(81,121,81);rgb(170,85,0);rgb(79,79,182);rgb(111,74,111);rgb(54,178,178);rgb(170,170,170);rgb(85,85,85);rgb(211,82,82);rgb(119,205,119);rgb(255,203,8);rgb(112,163,240);rgb(220,123,220);rgb(148,228,228);rgb(255,255,255)
 TabActivityColor=#aaaa00000000
+MiscShowUnsafePasteDialog=FALSE

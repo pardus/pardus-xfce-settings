@@ -1,0 +1,3 @@
+# Set default environment vars in Pardus
+
+export XDG_CONFIG_DIRS=/etc/xdg/pardus:/etc/xdg

@@ -24,7 +24,7 @@
 <actions>
 
   <action>
-    <icon>Terminal</icon>
+    <icon>utilities-terminal</icon>
     <patterns>*</patterns>
     <_name>Open Terminal Here</_name>
     <command>exo-open --working-directory %f --launch TerminalEmulator</command>
@@ -33,7 +33,7 @@
   </action>
 
   <action>
-    <icon>filefind</icon>
+    <icon>edit-find</icon>
     <_name>Find in this folder</_name>
     <command>catfish --path=%f</command>
     <_description>Search for files within this folder</_description>

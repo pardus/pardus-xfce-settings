@@ -12,5 +12,7 @@
     <property name="dpms-on-battery-sleep" type="uint" value="15"/>
     <property name="dpms-on-battery-off" type="uint" value="30"/>
     <property name="show-tray-icon" type="int" value="1"/>
+    <property name="show-presentation-indicator" type="bool" value="true"/>
+    <property name="show-panel-label" type="int" value="0"/>
   </property>
 </channel>

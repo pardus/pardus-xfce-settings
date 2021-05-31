@@ -1,22 +1,21 @@
 Source: pardus-xfce-settings
 Section: xfce
 Priority: optional
-Maintainer: Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>
+Maintainer: Fatih Altun <fatih.altun@pardus.org.tr>
 Build-Depends: debhelper (>= 9), intltool
 Standards-Version: 3.9.8
-Homepage: http://pardus.org.tr
+Homepage: https://www.pardus.org.tr
 
 Package: pardus-xfce-settings
 Architecture: all
-Pre-Depends: ${misc:Pre-Depends}, pardus-x11-settings
 Depends: ${misc:Depends},
- pardus-icon-theme,
+ dbus-x11,
  lightdm-gtk-greeter, 
- adapta-gtk-theme-colorpack,
  x11-common,
  xfce4-session,
  xfconf
-Recommends: libxfce4ui-utils
+Recommends: libxfce4ui-utils, numlockx
+Replaces: pardus-x11-settings
 Provides: lightdm-gtk-greeter-config
 Description: default settings for the Pardus desktop
  This package contains the default settings used by Pardus.

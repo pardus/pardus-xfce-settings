@@ -1,0 +1,8 @@
+#!/bin/sh
+
+xf=/etc/X11/Xsession.d/55numlockx
+if [ -r $xf ]; then
+    . $xf
+fi
+
+exit 0
