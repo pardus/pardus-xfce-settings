@@ -1,3 +1,10 @@
+pardus-xfce-settings (2021.2) ondokuz; urgency=medium
+
+  * Disable QT_STYLE_OVERRIDE
+  * Update whiskermenu defauls, use show as list
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Thu, 01 Jul 2021 17:53:57 +0300
+
 pardus-xfce-settings (2021.1) ondokuz; urgency=medium
 
   * Add pardus.software to favorites
