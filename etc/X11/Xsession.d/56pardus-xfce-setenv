@@ -2,8 +2,8 @@
 if [ "$DESKTOP_SESSION" = lightdm-xsession ] || [ "$XDG_CURRENT_DESKTOP" = XFCE ]; then
     # Disable GTK 3.16 overlay scrollbars
     export GTK_OVERLAY_SCROLLING=0
-    # QT5 apps to use GTK style
-    export QT_STYLE_OVERRIDE=gtk
+    # QT5 apps to use GTK style, this is no longer affects
+    # export QT_STYLE_OVERRIDE=gtk
     # Workaround clutter issue (LP: #1462445)
     export CLUTTER_BACKEND=x11
 fi
