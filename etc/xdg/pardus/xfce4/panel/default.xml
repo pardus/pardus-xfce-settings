@@ -21,6 +21,7 @@
         <value type="int" value="4"/>
         <value type="int" value="13"/>
       </property>
+      <property name="length-adjust" type="bool" value="false"/>
     </property>
   </property>
   <property name="plugins" type="empty">
