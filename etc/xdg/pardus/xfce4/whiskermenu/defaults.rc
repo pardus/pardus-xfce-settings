@@ -1,6 +1,6 @@
-favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,libreoffice-writer.desktop,libreoffice-calc.desktop,org.gnome.Software.desktop,exo-terminal-emulator.desktop,tr.org.pardus.software.desktop,pardus-store.desktop
+favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,libreoffice-writer.desktop,libreoffice-calc.desktop,org.gnome.Software.desktop,exo-terminal-emulator.desktop,tr.org.pardus.software.desktop
 button-title=Applications Menu
-button-icon=emblem-pardus
+button-icon=start-pardus
 show-button-title=true
 button-title=Pardus
 show-button-icon=true
