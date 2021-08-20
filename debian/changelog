@@ -1,3 +1,9 @@
+pardus-xfce-settings (2021.4) ondokuz; urgency=medium
+
+  * Update lightdm greeter indicators and theme
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Fri, 20 Aug 2021 18:40:03 +0300
+
 pardus-xfce-settings (2021.3) ondokuz; urgency=medium
 
   * Add square-icons, dragn drop to window buttons and Update panel size to 34
