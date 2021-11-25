@@ -31,7 +31,12 @@ msgstr ""
 
 #: ../thunar-print:9
 #, sh-format
-msgid " file(s) will be printed.\nAre you sure you want to continue ?"
+msgid "file(s) will be printed."
+msgstr ""
+
+#: ../thunar-print:10
+#, sh-format
+msgid "Are you sure you want to continue ?"
 msgstr ""
 
 #: ../thunar-print:16

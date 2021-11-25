@@ -36,8 +36,13 @@ msgstr "Yazdırma İsteği"
 
 #: ../thunar-print:9
 #, sh-format
-msgid " file(s) will be printed.\nAre you sure you want to continue ?"
-msgstr " dosya yazdırılacak.\nDevam etmek istediğinize emin misiniz ?"
+msgid "file(s) will be printed."
+msgstr "dosya yazdırılacak."
+
+#: ../thunar-print:10
+#, sh-format
+msgid "Are you sure you want to continue ?"
+msgstr "Devam etmek istediğinize emin misiniz ?"
 
 #: ../thunar-print:16
 #, sh-format

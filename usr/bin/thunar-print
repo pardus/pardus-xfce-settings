@@ -17,7 +17,8 @@ OK_MESSAGE="$(eval_gettext "File sent to printer.")"
 NOP_MESSAGE="$(eval_gettext "No printer found.")"
 
 ZEN_TITLE="$(eval_gettext "Printing Request")"
-ZEN_TEXT="$(eval_gettext " file(s) will be printed.\nAre you sure you want to continue ?")"
+ZEN_TEXT1="$(eval_gettext "file(s) will be printed.")"
+ZEN_TEXT2="$(eval_gettext "Are you sure you want to continue ?")"
 
 if [[ -x "$(command -v lpoptions)" ]]; then
   printer=`lpoptions`
@@ -27,7 +28,7 @@ fi
 
 if [[ "$printer" == *"printer"* ]]; then
 
-  if zenity --question --title "$ZEN_TITLE" --text "<big><b>$#</b>$ZEN_TEXT</big>" --no-wrap; then
+  if zenity --question --title "$ZEN_TITLE" --text "<big><b>$# </b>$ZEN_TEXT1\n$ZEN_TEXT2</big>" --no-wrap; then
 
     for File in "$@"
     do
