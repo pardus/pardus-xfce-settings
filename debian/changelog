@@ -1,3 +1,14 @@
+pardus-xfce-settings (2021.5) ondokuz; urgency=medium
+
+  * Add print file(s) to thunar right click menu
+  * Add zenity question before printing
+  * Fix translation in zenity message
+  * Add zenity to depends
+  * Update compat to 11
+  * Rm postinst script
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Thu, 25 Nov 2021 19:40:22 +0300
+
 pardus-xfce-settings (2021.4) ondokuz; urgency=medium
 
   * Update lightdm greeter indicators and theme
