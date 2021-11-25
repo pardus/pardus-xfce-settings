@@ -32,3 +32,11 @@ msgstr "Burada Terminal Aç"
 #: ../uca.xml.in.h:4
 msgid "Search for files within this folder"
 msgstr "Bu dizin içerisinde dosyaları ara"
+
+#: ../uca.xml.in.h:5
+msgid "Print file(s)"
+msgstr "Dosya(ları) yazdır"
+
+#: ../uca.xml.in.h:6
+msgid "Send one or multiple files to the default printer"
+msgstr "Yazıcıya bir veya daha fazla dosya gönder"

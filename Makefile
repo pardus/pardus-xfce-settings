@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-SUBDIRS := etc/xdg/pardus/Thunar/po usr/share/polkit-1/actions/po
+SUBDIRS := etc/xdg/pardus/Thunar/po usr/bin/po/ usr/share/polkit-1/actions/po
 
 all:
 	@echo "Nothing to build, call 'make install' instead."
@@ -8,6 +8,7 @@ all:
 install:
 	mkdir -pv $(DESTDIR)
 	cp -a etc usr $(DESTDIR)/.
+	mkdir -pv $(DESTDIR)/usr/share/locale
 	# po generation
 	for i in $(SUBDIRS); do \
 		make -C $(DESTDIR)/$$i; \

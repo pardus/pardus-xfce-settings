@@ -28,3 +28,11 @@ msgstr ""
 #: ../uca.xml.in.h:4
 msgid "Search for files within this folder"
 msgstr ""
+
+#: ../uca.xml.in.h:5
+msgid "Print file(s)"
+msgstr ""
+
+#: ../uca.xml.in.h:6
+msgid "Send one or multiple files to the default printer"
+msgstr ""
