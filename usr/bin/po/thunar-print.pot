@@ -14,14 +14,24 @@ msgstr ""
 "X-Generator: Launchpad (build 2e26c9bbd21cdca248baaea29aeffb920afcc32a)\n"
 "Language: \n"
 
-#: ../thunar-print:13
+#: ../thunar-print:3
 #, sh-format
 msgid "File sent to printer."
 msgstr ""
 
-#: ../thunar-print:15
+#: ../thunar-print:5
 #, sh-format
 msgid "No printer found."
+msgstr ""
+
+#: ../thunar-print:7
+#, sh-format
+msgid "No printer found."
+msgstr ""
+
+#: ../thunar-print:9
+#, sh-format
+msgid " file(s) will be printed.\nAre you sure you want to continue ?"
 msgstr ""
 
 #: ../thunar-print:16

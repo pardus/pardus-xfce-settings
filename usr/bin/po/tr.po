@@ -19,15 +19,25 @@ msgstr ""
 "X-Generator: Launchpad (build 2e26c9bbd21cdca248baaea29aeffb920afcc32a)\n"
 "X-Launchpad-Export-Date: 2020-04-09 10:16+0000\n"
 
-#: ../thunar-print:13
+#: ../thunar-print:3
 #, sh-format
 msgid "File sent to printer."
 msgstr "Dosya yazıcıya gönderildi."
 
-#: ../thunar-print:15
+#: ../thunar-print:5
 #, sh-format
 msgid "No printer found."
 msgstr "Yazıcı bulunamadı."
+
+#: ../thunar-print:7
+#, sh-format
+msgid "Printing Request"
+msgstr "Yazdırma İsteği"
+
+#: ../thunar-print:9
+#, sh-format
+msgid " file(s) will be printed.\nAre you sure you want to continue ?"
+msgstr " dosya yazdırılacak.\nDevam etmek istediğinize emin misiniz ?"
 
 #: ../thunar-print:16
 #, sh-format
