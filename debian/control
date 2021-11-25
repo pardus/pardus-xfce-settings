@@ -10,10 +10,11 @@ Package: pardus-xfce-settings
 Architecture: all
 Depends: ${misc:Depends},
  dbus-x11,
- lightdm-gtk-greeter, 
+ lightdm-gtk-greeter,
  x11-common,
  xfce4-session,
- xfconf
+ xfconf,
+ zenity
 Recommends: libxfce4ui-utils, numlockx
 Replaces: pardus-x11-settings
 Provides: lightdm-gtk-greeter-config
