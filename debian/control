@@ -15,7 +15,7 @@ Depends: ${misc:Depends},
  xfce4-session,
  xfconf,
  zenity
-Recommends: libxfce4ui-utils, numlockx
+Recommends: libxfce4ui-utils, numlockx, onboard
 Replaces: pardus-x11-settings
 Provides: lightdm-gtk-greeter-config
 Description: default settings for the Pardus desktop

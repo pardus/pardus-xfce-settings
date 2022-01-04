@@ -16,3 +16,6 @@ path-in-title=true
 
 [org.xfce.mousepad.state.search]
 direction=1
+
+[org.onboard]
+theme='/usr/share/onboard/themes/Nightshade.theme'
