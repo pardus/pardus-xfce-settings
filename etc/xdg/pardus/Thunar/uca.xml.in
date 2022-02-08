@@ -25,6 +25,7 @@
 
   <action>
     <icon>utilities-terminal</icon>
+    <unique-id>1641308137107949-1</unique-id>
     <patterns>*</patterns>
     <_name>Open Terminal Here</_name>
     <command>exo-open --working-directory %f --launch TerminalEmulator</command>
@@ -34,6 +35,7 @@
 
   <action>
     <icon>edit-find</icon>
+    <unique-id>1641308137108001-2</unique-id>
     <_name>Find in this folder</_name>
     <command>catfish --path=%f</command>
     <_description>Search for files within this folder</_description>
