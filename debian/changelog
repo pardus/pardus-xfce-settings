@@ -1,3 +1,11 @@
+pardus-xfce-settings (2022.2) ondokuz; urgency=medium
+
+  * Add new thunar shortcuts for search and terminal
+  * Update xfce window and keyboard shortcuts
+  * Update default MailReader app as evolution
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Thu, 10 Feb 2022 11:27:38 +0300
+
 pardus-xfce-settings (2022.1) ondokuz; urgency=medium
 
   * Add onboard with conf
