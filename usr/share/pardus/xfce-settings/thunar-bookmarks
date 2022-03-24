@@ -1,0 +1,50 @@
+#!/bin/bash
+
+bookmarks_dir="$HOME/.config/gtk-3.0"
+bookmarks_file="$bookmarks_dir/bookmarks"
+
+download=`xdg-user-dir DOWNLOAD`
+documents=`xdg-user-dir DOCUMENTS`
+pictures=`xdg-user-dir PICTURES`
+music=`xdg-user-dir MUSIC`
+videos=`xdg-user-dir VIDEOS`
+public=`xdg-user-dir PUBLICSHARE`
+
+config_dir="$HOME/.config/pardus"
+config_file="$config_dir/thunar-bookmarks"
+
+function urldecode() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
+
+control_create_bookmark () {
+	if [[ -d $1 ]]; then
+		if  urldecode `cat $bookmarks_file` | grep "file://"$1 > /dev/null 2>&1; then
+			echo "$1 already in bookmarks."
+		else
+			echo "file://"$1 >> $bookmarks_file
+			echo "$1 added to bookmarks."
+		fi
+	else
+		echo "$1 directory not exists."
+	fi
+}
+
+if ! [[ -f $config_file ]]; then
+	if ! [[ -d $config_dir ]]; then
+		mkdir -p $config_dir
+	fi
+	if ! [[ -d $bookmarks_dir ]]; then
+		mkdir -p $bookmarks_dir
+	fi
+	if ! [[ -f $bookmarks_file ]]; then
+		touch $bookmarks_file
+		control_create_bookmark $download
+		control_create_bookmark $documents
+		control_create_bookmark $pictures
+		control_create_bookmark $music
+		control_create_bookmark $videos
+		control_create_bookmark $public
+	fi
+	date "+%s" > $config_file
+fi
+
+exit 0
