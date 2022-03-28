@@ -53,10 +53,8 @@
       <property name="&lt;Alt&gt;F11" type="string" value="fullscreen_key"/>
       <property name="&lt;Alt&gt;F12" type="string" value="above_key"/>
 
-      <property name="&lt;Alt&gt;Left" type="string" value="tile_left_key"/>
-      <property name="&lt;Alt&gt;Right" type="string" value="tile_right_key"/>
-      <property name="&lt;Alt&gt;Up" type="string" value="maximize_window_key"/>
-      <property name="&lt;Alt&gt;Down" type="string" value="hide_window_key"/>
+      <property name="&lt;Alt&gt;F7" type="string" value="maximize_window_key"/>
+      <property name="&lt;Alt&gt;F9" type="string" value="hide_window_key"/>
 
       <property name="&lt;Alt&gt;Insert" type="string" value="add_workspace_key"/>
       <property name="&lt;Alt&gt;Delete" type="string" value="del_workspace_key"/>
