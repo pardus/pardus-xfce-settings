@@ -7,6 +7,9 @@
       <property name="show-filesystem" type="bool" value="false"/>
     </property>
   </property>
+  <property name="desktop-icons" type="empty">
+    <property name="tooltip-size" type="double" value="0.000000"/>
+  </property>
   <property name="windowlist-menu" type="empty">
     <property name="show-workspace-names" type="bool" value="false"/>
     <property name="show-icons" type="bool" value="false"/>
