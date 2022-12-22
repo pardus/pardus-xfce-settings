@@ -12,3 +12,4 @@ ColorPalette=rgb(0,0,0);rgb(170,0,0);rgb(81,121,81);rgb(170,85,0);rgb(79,79,182)
 TabActivityColor=#aaaa00000000
 MiscShowUnsafePasteDialog=FALSE
 ScrollingUnlimited=TRUE
+ScrollingOnOutput=FALSE
