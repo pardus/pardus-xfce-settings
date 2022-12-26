@@ -35,6 +35,7 @@
     </property>
     <property name="plugin-3" type="string" value="tasklist">
       <property name="sort-order" type="uint" value="4"/>
+      <property name="flat-buttons" type="bool" value="true"/>
     </property>
     <property name="plugin-4" type="string" value="actions">
       <property name="appearance" type="uint" value="0"/>
