@@ -1,3 +1,13 @@
+pardus-xfce-settings (2022.5) ondokuz; urgency=medium
+
+  * Update ctrl-alt-del shortcut as xfce4-session-logout
+  * Add unlimited scrolling to terminal
+  * Add scroll on output as false to terminal
+  * Add flat-buttons to xfce4-panel
+  * Add space to whiskermenu text
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Mon, 26 Dec 2022 11:54:31 +0300
+
 pardus-xfce-settings (2022.4) ondokuz; urgency=medium
 
   * Add desktop icons tooltip size as 0
