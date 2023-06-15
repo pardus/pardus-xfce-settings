@@ -18,6 +18,7 @@ Depends: ${misc:Depends},
 Recommends: libxfce4ui-utils, numlockx, onboard
 Replaces: pardus-x11-settings
 Provides: lightdm-gtk-greeter-config
+Breaks: pardus-configure
 Description: default settings for the Pardus desktop
  This package contains the default settings used by Pardus.
 
