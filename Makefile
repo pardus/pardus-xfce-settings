@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-SUBDIRS := etc/xdg/pardus/Thunar/po usr/bin/po/ usr/share/polkit-1/actions/po
+SUBDIRS := etc/xdg/pardus/Thunar/po usr/bin/po/ usr/share/polkit-1/actions/po usr/share/pardus/xfce-settings/xdg-pardus-templates/po/
 
 all:
 	@echo "Nothing to build, call 'make install' instead."

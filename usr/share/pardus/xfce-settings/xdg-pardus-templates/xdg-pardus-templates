@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jun 15 13:54:05 2023
+
+@author: fatih
+"""
+
+import gettext
+import os
+import shutil
+import subprocess
+import time
+
+gettext.bindtextdomain('xdg-pardus-templates', '/usr/share/locale')
+gettext.textdomain('xdg-pardus-templates')
+_ = gettext.gettext
+
+user_home = os.path.expanduser('~')
+user_config_dir = os.path.join(user_home, ".config/pardus")
+user_config_file = os.path.join(user_config_dir, "xfce-templates")
+
+user_template_dir = subprocess.check_output(["xdg-user-dir", "TEMPLATES"]).strip()
+user_template_dir = user_template_dir.decode("utf-8")
+
+template_dir = "/usr/share/pardus/xfce-settings/xdg-pardus-templates/templates"
+
+templates = [
+    {"file": "Presentation.odp", "name": _("Presentation")},
+    {"file": "Spreadsheet.ods", "name": _("Spreadsheet")},
+    {"file": "Word Processor.odt", "name": _("Word Processor")}
+]
+
+if not os.path.isfile(user_config_file):
+    if not os.path.isdir(user_config_dir):
+        os.makedirs(user_config_dir, exist_ok=True)
+    with open(user_config_file, "w") as ucf:
+        ucf.write("{}".format(time.time()))
+    if os.path.isdir(user_template_dir):
+        if not os.listdir(user_template_dir):
+            print("{} is empty, creating templates".format(user_template_dir))
+            for template in templates:
+                src_file = os.path.join(template_dir, template["file"])
+                dst_file = os.path.join(user_template_dir, template["name"] + os.path.splitext(template["file"])[1])
+                shutil.copy2(src_file, dst_file)
+                print("{} created".format(dst_file))
+        else:
+            print("{} is not empty".format(user_template_dir))
