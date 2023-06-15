@@ -42,7 +42,10 @@ if not os.path.isfile(user_config_file):
             for template in templates:
                 src_file = os.path.join(template_dir, template["file"])
                 dst_file = os.path.join(user_template_dir, template["name"] + os.path.splitext(template["file"])[1])
-                shutil.copy2(src_file, dst_file)
-                print("{} created".format(dst_file))
+                if os.path.isfile(src_file):
+                    shutil.copy2(src_file, dst_file)
+                    print("{} created".format(dst_file))
+                else:
+                    print("{} file not exists".format(src_file))
         else:
             print("{} is not empty".format(user_template_dir))
