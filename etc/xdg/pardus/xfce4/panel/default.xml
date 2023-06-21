@@ -26,15 +26,16 @@
   </property>
   <property name="plugins" type="empty">
     <property name="plugin-1" type="string" value="systray">
-      <property name="names-visible" type="array">
-        <value type="string" value="networkmanager applet"/>
-      </property>
+      <property name="menu-is-primary" type="bool" value="true"/>
       <property name="show-frame" type="bool" value="false"/>
-      <property name="icon-size" type="int" value="0"/>
       <property name="square-icons" type="bool" value="true"/>
+      <property name="size-max" type="uint" value="22"/>
+      <property name="symbolic-icons" type="bool" value="true"/>
+      <property name="icon-size" type="int" value="0"/>
     </property>
     <property name="plugin-3" type="string" value="tasklist">
       <property name="sort-order" type="uint" value="4"/>
+      <property name="flat-buttons" type="bool" value="true"/>
     </property>
     <property name="plugin-4" type="string" value="actions">
       <property name="appearance" type="uint" value="0"/>
@@ -57,7 +58,13 @@
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>
     </property>
-    <property name="plugin-8" type="string" value="datetime"/>
+    <property name="plugin-8" type="string" value="clock">
+      <property name="digital-layout" type="uint" value="3"/>
+      <property name="digital-date-font" type="string" value="Quicksand Medium, Bold 10"/>
+      <property name="digital-time-font" type="string" value="Quicksand Medium, Bold 15"/>
+      <property name="digital-date-format" type="string" value="%d/%m/%Y"/>
+      <property name="digital-time-format" type="string" value="%H:%M"/>
+    </property>
     <property name="plugin-5" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
     </property>
