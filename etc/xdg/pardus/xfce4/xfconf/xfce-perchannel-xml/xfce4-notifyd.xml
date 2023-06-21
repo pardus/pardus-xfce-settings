@@ -4,4 +4,9 @@
   <property name="notify-location" type="uint" value="2"/>
   <property name="theme" type="string" value="Default"/>
   <property name="initial-opacity" type="double" value="0.850000"/>
+  <property name="log-level" type="uint" value="1"/>
+  <property name="log-level-apps" type="uint" value="0"/>
+  <property name="notification-log" type="bool" value="true"/>
+  <property name="do-slideout" type="bool" value="true"/>
+  <property name="do-fadeout" type="bool" value="true"/>
 </channel>
