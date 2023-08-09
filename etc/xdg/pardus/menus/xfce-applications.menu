@@ -180,6 +180,16 @@
             <Category>X-Xfce-Toplevel</Category>
         </Exclude>
     </Menu>
+
+    <Menu>
+     <Name>Pardus</Name>
+     <Directory>X-Pardus-Apps.directory</Directory>
+     <Include>
+       <And>
+         <Category>X-Pardus-Apps</Category>
+       </And>
+     </Include>
+    </Menu>
     <DefaultMergeDirs/>
 
 </Menu>
