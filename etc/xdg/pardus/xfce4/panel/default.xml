@@ -26,7 +26,7 @@
   </property>
   <property name="plugins" type="empty">
     <property name="plugin-1" type="string" value="systray">
-      <property name="menu-is-primary" type="bool" value="true"/>
+      <property name="menu-is-primary" type="bool" value="false"/>
       <property name="show-frame" type="bool" value="false"/>
       <property name="square-icons" type="bool" value="true"/>
       <property name="size-max" type="uint" value="22"/>
