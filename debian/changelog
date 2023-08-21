@@ -1,3 +1,22 @@
+pardus-xfce-settings (2023.0) yirmiuc; urgency=medium
+
+  * Add xdg-pardus-templates
+  * Add pardus-configure package to Breaks
+  * Add src_file control to xdg-pardus-templates
+  * Rm executable from templates
+  * Update notifyd, enable logging and fade-out
+  * Update default theme name and Enable sync xfwm4 theme
+  * Change datetime to clock and Update systray
+  * Sync default.xml and xfce4-panel.xml
+  * Update xfwm4 theme name
+  * Disable notifyd logging
+  * Fix window corner events
+  * Add X-Pardus-Apps directory to menu
+  * Add thunar last window width and height
+  * Update tray icon menu-is-primary key as false
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Mon, 21 Aug 2023 12:28:06 +0300
+
 pardus-xfce-settings (2022.6) ondokuz; urgency=medium
 
   * Update notification theme to Default
