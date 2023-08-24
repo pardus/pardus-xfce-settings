@@ -6,7 +6,7 @@
     <property name="scroll_workspaces" type="bool" value="false"/>
     <property name="theme" type="string" value="pardus-xfce"/>
     <property name="button_layout" type="string" value="O|HMC"/>
-    <property name="title_font" type="string" value="Sans Bold 11"/>
+    <property name="title_font" type="string" value="Ubuntu Bold 11"/>
     <property name="wrap_windows" type="bool" value="false"/>
   </property>
 </channel>
