@@ -1,3 +1,10 @@
+pardus-xfce-settings (2023.1) yirmiuc; urgency=medium
+
+  * Update default font as ubuntu
+  * Add fonts-ubuntu to depends
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Thu, 24 Aug 2023 20:58:07 +0300
+
 pardus-xfce-settings (2023.0) yirmiuc; urgency=medium
 
   * Add xdg-pardus-templates
